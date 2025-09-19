@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-body-bg: rgb(153, 147, 147);
+  --color-navbar-bg: #181818;
+  --color-dropdown-bg: #333;
+  --color-text: #fff;
+  --color-accent: #ff6600;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(153, 147, 147);
+}
