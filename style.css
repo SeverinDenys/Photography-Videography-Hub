@@ -24,8 +24,6 @@ body {
   background-color: rgb(153, 147, 147);
 }
 
-/* navigation start */
-
 #navbar {
   display: flex;
   align-items: center;
@@ -33,27 +31,23 @@ body {
   background-color: var(--color-navbar-bg);
   font-size: 2rem;
 }
-
-.logo p {
+#navbar .logo p {
   color: var(--color-text);
   font-size: 2rem;
   font-weight: bold;
   padding-left: 1rem;
 }
-
-.nav-links {
+#navbar .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
   padding: 2rem 0;
 }
-
-.nav-links li {
+#navbar .nav-links li {
   position: relative;
-  line-height: 1; /* prevents taller li */
+  line-height: 1;
 }
-
-.nav-links a {
+#navbar .nav-links li a {
   color: var(--color-text);
   text-decoration: none;
   padding: 8px;
@@ -61,12 +55,10 @@ body {
   display: flex;
   align-items: center;
 }
-
-.nav-links a:hover {
+#navbar .nav-links li a:hover {
   color: var(--color-accent);
 }
-
-.dropdown {
+#navbar .nav-links li .dropdown {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -78,15 +70,14 @@ body {
   min-width: 180px;
   transition: all 0.2s ease-in-out;
 }
-
-.nav-links li:hover .dropdown {
+#navbar .nav-links li:hover .dropdown {
   opacity: 1;
   visibility: visible;
 }
-
-.nav-icons a {
+#navbar .nav-icons a {
   color: var(--color-text);
   font-size: 1.5rem;
   text-decoration: none;
 }
-/* Navigation End */
+
+/*# sourceMappingURL=style.css.map */
