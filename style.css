@@ -6,6 +6,14 @@
   box-sizing: inherit;
 }
 
+:root {
+  --color-body-bg: rgb(153, 147, 147);
+  --color-navbar-bg: #181818;
+  --color-dropdown-bg: #333;
+  --color-text: #fff;
+  --color-accent: #ff6600;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -15,3 +23,70 @@ html {
 body {
   background-color: rgb(153, 147, 147);
 }
+
+/* navigation start */
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--color-navbar-bg);
+  font-size: 2rem;
+}
+
+.logo p {
+  color: var(--color-text);
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+.nav-links li {
+  position: relative;
+  line-height: 1; /* prevents taller li */
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 8px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: var(--color-dropdown-bg);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-icons a {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+/* Navigation End */
