@@ -4,11 +4,12 @@
   color: var(--color-text);
 
   .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 4rem;
     align-items: center;
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
 
     .about-image {

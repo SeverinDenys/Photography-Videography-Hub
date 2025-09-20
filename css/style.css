@@ -67,26 +67,16 @@ body {
   visibility: visible;
 }
 
-#Intro-section .Intro-title {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 0 0 0;
-  font-size: 3rem;
-}
 #Intro-section .carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: var(--color-body-bg);
 }
 #Intro-section .carousel .carousel-slide {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -96,11 +86,10 @@ body {
   opacity: 1;
 }
 #Intro-section .carousel .carousel-slide img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.6);
-  border-radius: 1rem;
+  object-position: center;
 }
 #Intro-section .carousel .carousel-slide img.migrant-mother {
   object-position: 50% 20%;
@@ -128,11 +117,12 @@ body {
   color: var(--color-text);
 }
 #about-me .about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 4rem;
   align-items: center;
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
 }
 #about-me .about-container .about-image {
@@ -164,6 +154,64 @@ body {
   border-radius: 0.5rem;
   text-decoration: none;
   transition: background 0.3s;
+}
+
+#my-works {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: var(--color-body-bg);
+}
+#my-works .works-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+#my-works .works-description {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  color: var(--color-text);
+}
+#my-works .works-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+  margin: 0 auto;
+}
+#my-works .works-carousel .works-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+#my-works .works-carousel .works-slide {
+  min-width: 250px;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3);
+}
+#my-works .works-carousel .works-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+#my-works .works-carousel .works-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+#my-works .works-carousel .works-controls .works-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+  transition: background 0.3s;
+}
+#my-works .works-carousel .works-controls .works-btn:hover {
+  background: var(--color-accent);
 }
 
 /*# sourceMappingURL=style.css.map */

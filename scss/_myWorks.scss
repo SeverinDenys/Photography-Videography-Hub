@@ -1,0 +1,67 @@
+#my-works {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: var(--color-body-bg);
+
+  .works-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  .works-description {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+  }
+
+  .works-carousel {
+    position: relative;
+    overflow: hidden; // ✅ hides the extra slides
+    max-width: 90%;
+    margin: 0 auto;
+
+    .works-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .works-slide {
+      min-width: 250px;
+      margin: 0 1rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3);
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    // ✅ New control container
+    .works-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+
+      .works-btn {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        font-size: 2rem;
+        border-radius: 50%;
+        margin: 0 1rem;
+        transition: background 0.3s;
+
+        &:hover {
+          background: var(--color-accent);
+        }
+      }
+    }
+  }
+}
