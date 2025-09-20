@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
     <link
       rel="stylesheet"
@@ -15,31 +18,141 @@
     <!-- Navigation start-->
     <header>
       <nav id="navbar">
-        <div class="logo">
-          <p>📸 Photography Hub</p>
-        </div>
-
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="history.html">History</a></li>
           <li>
             <a href="#">Gear ▾</a>
-            <ul class="dropdown">
+            <ul class="dropdown dropdown-text">
               <li><a href="photo-cameras.html">Photo Cameras</a></li>
               <li><a href="video-cameras.html">Video Cameras</a></li>
               <li><a href="drones.html">Drones</a></li>
-              <li><a href="action-cameras.html">Action Cameras</a></li>
+              <li>
+                <a href="action-cameras.html">Action Cameras</a>
+              </li>
             </ul>
           </li>
+          <li><a href="resources.html">Resources</a></li>
         </ul>
-
-        <div class="nav-icons">
-          <a href="#"><i class="fas fa-search"></i></a>
-        </div>
       </nav>
     </header>
     <!-- Navigation end-->
+
+    <!-- Photography/videography intro beginning -->
+    <!-- Section Title -->
+    <section id="Intro-section">
+      <h1 class="Intro-title">A Journey in Pictures</h1>
+
+      <!-- Carousel -->
+      <div class="carousel">
+        <div class="carousel-slide active">
+          <img
+            src="/images/introCarousel/firstPicture.jpg"
+            alt="First Photograph"
+          />
+          <div class="carousel-text">
+            <h2>“The First Photograph”</h2>
+            <p>
+              Taken by Joseph Nicéphore Niépce in 1826 — the birth of
+              photography.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img
+            src="images/introCarousel/firstKiss.jpg"
+            class="firstKiss"
+            alt="Times Square Kiss"
+          />
+          <div class="carousel-text">
+            <h2>“V-J Day in Times Square”</h2>
+            <p>
+              Alfred Eisenstaedt, 1945 — celebrating the end of World
+              War II.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img
+            src="images/introCarousel/Lunch_atop_a_Skyscraper2.jpg"
+            alt="Earthrise"
+          />
+          <div class="carousel-text">
+            <h2>“Lunch at a top of Skyscraper”</h2>
+            <p>
+              New York City, 1932 — eleven construction workers
+              casually eating lunch on a steel beam during the
+              construction of Rockefeller Center.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img
+            src="images/introCarousel/AfganPhoto.jpeg"
+            alt="Afghan Girl"
+          />
+          <div class="carousel-text">
+            <h2>“Afghan Girl”</h2>
+            <p>
+              Steve McCurry, 1984 — one of the most iconic portraits
+              ever published.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img
+            src="images/introCarousel/pillarsofcreation.jpeg"
+            alt="Pillars of Creation"
+          />
+          <div class="carousel-text">
+            <h2>“Pillars of Creation”</h2>
+            <p>
+              Hubble Telescope, 1995 — a breathtaking view of star
+              formation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Photography/videography intro  end-->
+
+    <!-- About Me beginning -->
+    <section id="about-me">
+      <div class="about-container">
+        <div class="about-image">
+          <img
+            src="images/Me/PXL_20250913_092905676.RAW-02.ORIGINAL (1).jpg"
+            alt="Portrait of Denys"
+          />
+        </div>
+
+        <!-- Right: Text -->
+        <div class="about-text">
+          <h2>Hi, I’m Denys 👋</h2>
+          <p class="intro">
+            I'm a young enthusiast living in Luzern, currently on the
+            journey to becoming a
+            <strong>Front-End Developer</strong>. I'm also a
+            passionate
+            <strong>nature and landscape photographer</strong> who
+            loves hiking and traveling. My photography adventures have
+            taken me through the Czech Republic, Austria, Portugal,
+            Iceland, Italy, Switzerland, and beyond.
+          </p>
+          <p class="extra">
+            Feel free to reach out if you'd like to know more about
+            me, my work, or my creative journey!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me end -->
 
     <script src="script.js"></script>
   </body>
