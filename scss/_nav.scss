@@ -1,36 +1,25 @@
 #navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: var(--color-navbar-bg);
   font-size: 2rem;
-
-  .logo {
-    p {
-      color: var(--color-text);
-      font-size: 2rem;
-      font-weight: bold;
-      padding-left: 1rem;
-    }
-  }
 
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly; // spreads items evenly across full width
+    width: 100%; // make ul span the navbar
     padding: 2rem 0;
+    margin: 0;
 
     li {
       position: relative;
-      line-height: 1; // prevents taller li
 
       a {
         color: var(--color-text);
         text-decoration: none;
-        padding: 8px;
+        padding: 1rem;
         transition: color 0.3s;
-        display: flex;
-        align-items: center;
 
         &:hover {
           color: var(--color-accent);
@@ -41,12 +30,12 @@
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        top: 40px;
+        top: 4rem;
         left: 0;
         background: var(--color-dropdown-bg);
         list-style: none;
-        padding: 10px 0;
-        min-width: 180px;
+        padding: 1rem 0;
+        min-width: 18rem;
         transition: all 0.2s ease-in-out;
       }
 
@@ -56,13 +45,4 @@
       }
     }
   }
-
-  .nav-icons {
-    a {
-      color: var(--color-text);
-      font-size: 1.5rem;
-      text-decoration: none;
-    }
-  }
 }
-// Navigation End

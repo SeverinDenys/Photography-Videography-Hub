@@ -1,0 +1,55 @@
+#about-me {
+  padding: 6rem 2rem;
+  background: var(--color-body-bg);
+  color: var(--color-text);
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .about-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4); // subtle depth
+      }
+    }
+
+    .about-text {
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--color-accent); // accent headline
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: var(--color-text); // keeps text consistent
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--color-accent);
+        color: #fff;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: background 0.3s;
+
+        // &:hover {
+        //   background: lighten(var(--color-accent), 10%);
+        // }
+      }
+    }
+  }
+}
