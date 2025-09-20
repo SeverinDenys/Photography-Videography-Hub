@@ -1,25 +1,15 @@
 #Intro-section {
-  .Intro-title {
-    display: flex;
-    justify-content: center;
-    padding: 4rem 0 0 0;
-    font-size: 3rem;
-  }
   .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; // full viewport height
     overflow: hidden;
-    background: var(--color-body-bg);
 
     .carousel-slide {
       position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%; // if we remove it, then we keep the original demensions
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
       opacity: 0;
       transition: opacity 1s ease;
@@ -29,12 +19,12 @@
       }
 
       img {
-        width: 90%;
-        height: 90%;
-        object-fit: cover;
-        box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.6);
-        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // fills screen
+        object-position: center; // default position
 
+        // ✅ custom overrides remain
         &.migrant-mother {
           object-position: 50% 20%;
         }
