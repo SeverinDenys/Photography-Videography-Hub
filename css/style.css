@@ -60,24 +60,6 @@ body {
 #navbar .nav-links li a:hover {
   color: var(--color-accent);
 }
-#navbar .nav-links li .dropdown {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  list-style: none;
-  padding: 1rem 0;
-  min-width: 18rem;
-  transition: all 0.2s ease-in-out;
-}
-#navbar .nav-links li:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-}
 
 #Intro-section {
   position: relative;
