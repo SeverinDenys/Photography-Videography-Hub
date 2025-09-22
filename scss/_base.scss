@@ -7,11 +7,13 @@
 }
 
 :root {
-  --color-body-bg: rgb(153, 147, 147);
-  --color-navbar-bg: #181818;
-  --color-dropdown-bg: #333;
-  --color-text: #fff;
-  --color-accent: #ff6600;
+  --color-bg: #fafafa;
+  --color-dark: #000;
+  --color-text-main: #333;
+  --color-text-light: #555;
+  --color-accent: #e76f1f; // keep your accent
+  --color-navbar-bg: rgba(255, 255, 255, 0.95);
+  --color-overlay-dark: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -21,5 +23,10 @@ html {
 }
 
 body {
-  background-color: rgb(153, 147, 147);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }

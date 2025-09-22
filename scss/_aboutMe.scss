@@ -1,7 +1,10 @@
 #about-me {
   padding: 6rem 2rem;
-  background: var(--color-body-bg);
-  color: var(--color-text);
+
+  .about-text .intro {
+    font-style: italic;
+    color: #444;
+  }
 
   .about-container {
     display: flex;
@@ -25,17 +28,18 @@
     }
 
     .about-text {
+      max-width: 60rem;
+      text-align: left;
       h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: var(--color-accent); // accent headline
+        font-size: 2.8rem;
+        color: var(--color-accent);
+        margin-bottom: 1rem;
       }
-
       p {
-        font-size: 1.6rem;
-        line-height: 1.6;
+        font-size: 2rem;
+        color: var(--color-text-light);
+        line-height: 1.5;
         margin-bottom: 1.5rem;
-        color: var(--color-text); // keeps text consistent
       }
 
       .btn {
