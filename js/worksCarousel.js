@@ -1,37 +1,40 @@
 export function initWorksCarousel() {
-  const track = document.querySelector(".works-track");
-  const slidesWorks = document.querySelectorAll(".works-slide");
-  const prevBtn = document.querySelector(".works-btn.prev");
-  const nextBtn = document.querySelector(".works-btn.next");
+  const carousel = document.querySelector(".works-carousel");
+  if (!carousel) return;
 
-  let indexWorks = 0;
-  const slideWidth = slidesWorks[0].offsetWidth + 20;
-  const visibleSlides = Math.floor(
-    track.parentElement.offsetWidth / slideWidth
-  );
-  const maxIndex = slidesWorks.length - visibleSlides;
+  const track = carousel.querySelector(".works-track");
+  const slides = carousel.querySelectorAll(".works-slide");
+  const prevBtn = carousel.querySelector(".works-btn.prev");
+  const nextBtn = carousel.querySelector(".works-btn.next");
 
-  function updateCarousel() {
-    track.style.transform = `translateX(-${
-      indexWorks * slideWidth
-    }px)`;
-    prevBtn.disabled = indexWorks === 0;
-    nextBtn.disabled = indexWorks >= maxIndex;
+  let index = 0;
+
+  function getSlideWidth() {
+    return slides[0].offsetWidth + 16; // width + gap
   }
 
-  updateCarousel();
+  function getMaxIndex() {
+    const visibleCount = Math.floor(carousel.offsetWidth / getSlideWidth());
+    return slides.length - visibleCount; // last full "page"
+  }
 
-  nextBtn.addEventListener("click", () => {
-    if (indexWorks < maxIndex) {
-      indexWorks++;
-      updateCarousel();
-    }
-  });
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index >= getMaxIndex();
+  }
 
   prevBtn.addEventListener("click", () => {
-    if (indexWorks > 0) {
-      indexWorks--;
-      updateCarousel();
-    }
+    if (index > 0) index--;
+    updateCarousel();
   });
+
+  nextBtn.addEventListener("click", () => {
+    if (index < getMaxIndex()) index++;
+    updateCarousel();
+  });
+
+  window.addEventListener("resize", updateCarousel);
+
+  updateCarousel();
 }
