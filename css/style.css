@@ -85,37 +85,36 @@ body {
   margin-bottom: 0;
   color: var(--color-text-light);
 }
-#Intro-section .carousel {
+#Intro-section .intro-carousel {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-#Intro-section .carousel .carousel-slide {
+#Intro-section .intro-carousel .carousel-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   opacity: 0;
   transition: opacity 1s ease;
 }
-#Intro-section .carousel .carousel-slide.active {
+#Intro-section .intro-carousel .carousel-slide.active {
   opacity: 1;
 }
-#Intro-section .carousel .carousel-slide img {
+#Intro-section .intro-carousel .carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-#Intro-section .carousel .carousel-slide img.migrant-mother {
+#Intro-section .intro-carousel .carousel-slide img.migrant-mother {
   object-position: 50% 20%;
 }
-#Intro-section .carousel .carousel-slide img.firstKiss {
+#Intro-section .intro-carousel .carousel-slide img.firstKiss {
   object-position: 50% 30%;
 }
-#Intro-section .carousel .carousel-slide .carousel-text {
+#Intro-section .intro-carousel .carousel-slide .carousel-text {
   position: absolute;
   bottom: 7%;
   left: 50%;
@@ -181,7 +180,7 @@ body {
 }
 
 #my-works {
-  padding: 6rem 2rem;
+  padding: 2rem 2rem;
 }
 #my-works .works-title {
   text-align: center;
@@ -361,18 +360,12 @@ body {
   color: var(--color-accent);
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
 .carousel .carousel-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -384,6 +377,44 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+#filters {
+  padding-top: 50rem;
+}
+
+#cameras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+#cameras .cameras-container {
+  background: #fff;
+  max-width: 250px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+#cameras .cameras-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* keeps proportions */
+  background: #f8f8f8; /* optional, adds neutral background */
+  padding: 0.5rem; /* optional spacing inside box */
+  border-radius: 6px; /* optional rounded look */
+}
+#cameras .cameras-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+#cameras .cameras-info p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

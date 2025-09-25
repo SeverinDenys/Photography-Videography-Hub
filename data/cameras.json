@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "brand": "Canon",
+    "model": "EOS R5",
+    "price": 3899,
+    "sensor": "Full Frame",
+    "megapixels": 45,
+    "weight": 738,
+    "year": 2020,
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758817047/eos_r5_body__azrm5w.png",
+    "useCases": ["portrait", "wildlife", "nature"]
+  },
+  {
+    "id": 2,
+    "brand": "Sony",
+    "model": "A7 IV",
+    "price": 2499,
+    "sensor": "Full Frame",
+    "megapixels": 33,
+    "weight": 659,
+    "year": 2021,
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758817445/sonya7IV_oo2bdx.png",
+    "useCases": ["portrait", "street", "travel"]
+  }
+]
