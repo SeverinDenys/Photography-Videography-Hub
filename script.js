@@ -36,6 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
 // getCameraData();
 
 let camerasData = [];
+let brandSelect = document.getElementById("brand");
+
+const handleFilters = () => {
+  brandSelect.addEventListener("change", (event) => {
+    const selectedBrand = event.target.value;
+
+    let filtered = camerasData;
+    if (selectedBrand) {
+      filtered = camerasData.filter(
+        (camera) => camera.brand.toLowerCase() === selectedBrand.toLowerCase()
+      );
+    }
+
+    renderCameras(filtered);
+  });
+};
+
+handleFilters();
 
 async function getCameraData() {
   try {
