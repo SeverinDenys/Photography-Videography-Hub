@@ -7,51 +7,52 @@ document.addEventListener("DOMContentLoaded", () => {
   initWorksCarousel();
 });
 
-// async function getCameraData() {
-//   const url =
-//     "https://camera-database.p.rapidapi.com/cameras?brand=Canon";
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "x-rapidapi-key":
-//         "ff806745b9mshfc1372b27e4e138p180ea7jsn37710e946d8b",
-//       "x-rapidapi-host": "camera-database.p.rapidapi.com",
-//     },
-//   };
-
-//   try {
-//     const response = await fetch(url, options);
-
-//     if (!response.ok) {
-//       const errorText = await response.text();
-//       throw new Error(`HTTP ${response.status}: ${errorText}`);
-//     }
-//     const result = await response.json();
-//     console.log("API result:", result);
-//   } catch (error) {
-//     console.error("Fetch Error:", error);
-//   }
-// }
-
-// getCameraData();
-
 let camerasData = [];
 let brandSelect = document.getElementById("brand");
+let matrixSelect = document.getElementById("sensor");
 
 const handleFilters = () => {
   brandSelect.addEventListener("change", (event) => {
     const selectedBrand = event.target.value;
+    console.log(selectedBrand);
 
     let filtered = camerasData;
     if (selectedBrand) {
       filtered = camerasData.filter(
         (camera) => camera.brand.toLowerCase() === selectedBrand.toLowerCase()
-      );
+      ); // function for all event handlers
     }
 
     renderCameras(filtered);
+
+    // put event handler to another dropdown
+    // move filter out the function and
+    // function that does filtering on all the dropdowns
+    // 1-json and create array file
   });
 };
+const handleFiltersMatrix = () => {
+  matrixSelect.addEventListener("change", (event) => {
+    const selectedMatrix = event.target.value;
+    console.log(selectedMatrix);
+
+    let filtered = camerasData;
+    if (selectedMatrix) {
+      filtered = camerasData.filter(
+        (camera) => camera.sensor.toLowerCase() === selectedMatrix.toLowerCase()
+      ); // function for all event handlers
+    }
+
+    renderCameras(filtered);
+
+    // put event handler to another dropdown
+    // move filter out the function and
+    // function that does filtering on all the dropdowns
+    // 1-json and create array file
+  });
+};
+
+handleFiltersMatrix();
 
 handleFilters();
 
@@ -97,3 +98,5 @@ getCameraData().then((data) => {
   camerasData = data;
   renderCameras(camerasData);
 });
+
+/// extract the function and put there the values for filtering

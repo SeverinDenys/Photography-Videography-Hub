@@ -360,6 +360,11 @@ body {
   color: var(--color-accent);
 }
 
+.carousel {
+  position: relative;
+  height: 100vh;
+  margin-bottom: 5rem;
+}
 .carousel .carousel-slide {
   position: absolute;
   top: 0;
@@ -380,7 +385,59 @@ body {
 }
 
 #filters {
-  padding-top: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+#filters h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+#filters .filter-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+#filters .filter-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+#filters .filter-group select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+#filters .filter-group select:hover {
+  border-color: #888;
+  background-color: #fff;
+}
+#filters .filter-group select:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
+}
+#filters .filter-group input[type=checkbox] {
+  margin-right: 0.5rem;
+  accent-color: #0077ff;
+}
+#filters .filter-group p {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+#filters .filter-group label {
+  cursor: pointer;
 }
 
 #cameras {
@@ -402,11 +459,11 @@ body {
 }
 #cameras .cameras-container img {
   width: 100%;
-  height: 200px;
-  object-fit: contain; /* keeps proportions */
-  background: #f8f8f8; /* optional, adds neutral background */
-  padding: 0.5rem; /* optional spacing inside box */
-  border-radius: 6px; /* optional rounded look */
+  height: 20rem;
+  object-fit: contain;
+  background: #f8f8f8;
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 #cameras .cameras-info h4 {
   font-size: 1.2rem;
