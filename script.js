@@ -10,51 +10,65 @@ document.addEventListener("DOMContentLoaded", () => {
 let camerasData = [];
 let brandSelect = document.getElementById("brand");
 let matrixSelect = document.getElementById("sensor");
+let priceSelect = document.getElementById("price");
 
-const handleFilters = () => {
-  brandSelect.addEventListener("change", (event) => {
-    const selectedBrand = event.target.value;
-    console.log(selectedBrand);
+brandSelect.addEventListener("change", applyFilters);
 
-    let filtered = camerasData;
-    if (selectedBrand) {
-      filtered = camerasData.filter(
-        (camera) => camera.brand.toLowerCase() === selectedBrand.toLowerCase()
-      ); // function for all event handlers
+matrixSelect.addEventListener("change", applyFilters);
+
+priceSelect.addEventListener("change", applyFilters);
+
+function getFilteredCameras() {
+  let filtered = camerasData;
+
+  if (brandSelect.value) {
+    filtered = filtered.filter(
+      (camera) =>
+        camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
+    );
+  }
+
+  const normalize = (str) => str.toLowerCase().replace(/[-\s]/g, ""); // removes dashes & spaces
+
+  if (matrixSelect.value) {
+    const sensorValue = normalize(matrixSelect.value);
+    filtered = filtered.filter(
+      (camera) => normalize(camera.sensor) === sensorValue
+    );
+  }
+  // Price filter
+  if (priceSelect.value) {
+    const value = priceSelect.value;
+
+    if (value.includes("-")) {
+      // Example "500-1000"
+      const [min, max] = value.split("-").map(Number);
+      filtered = filtered.filter(
+        (camera) => camera.price >= min && camera.price <= max
+      );
+    } else if (value.includes("+")) {
+      // Example "2000+"
+      const min = parseInt(value); // "2000" -> 2000
+      filtered = filtered.filter((camera) => camera.price >= min);
     }
+  }
 
+  return filtered;
+}
+
+function applyFilters() {
+  const filtered = getFilteredCameras();
+
+  if (
+    !brandSelect.value &&
+    !matrixSelect.value &&
+    !priceSelect.value
+  ) {
+    renderCameras(camerasData.slice(0, 10));
+  } else {
     renderCameras(filtered);
-
-    // put event handler to another dropdown
-    // move filter out the function and
-    // function that does filtering on all the dropdowns
-    // 1-json and create array file
-  });
-};
-const handleFiltersMatrix = () => {
-  matrixSelect.addEventListener("change", (event) => {
-    const selectedMatrix = event.target.value;
-    console.log(selectedMatrix);
-
-    let filtered = camerasData;
-    if (selectedMatrix) {
-      filtered = camerasData.filter(
-        (camera) => camera.sensor.toLowerCase() === selectedMatrix.toLowerCase()
-      ); // function for all event handlers
-    }
-
-    renderCameras(filtered);
-
-    // put event handler to another dropdown
-    // move filter out the function and
-    // function that does filtering on all the dropdowns
-    // 1-json and create array file
-  });
-};
-
-handleFiltersMatrix();
-
-handleFilters();
+  }
+}
 
 async function getCameraData() {
   try {
@@ -96,7 +110,7 @@ const renderCameras = (cameras) => {
 
 getCameraData().then((data) => {
   camerasData = data;
-  renderCameras(camerasData);
+  applyFilters();
 });
 
 /// extract the function and put there the values for filtering
