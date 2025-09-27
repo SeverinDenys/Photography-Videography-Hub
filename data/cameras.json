@@ -61,18 +61,6 @@
   },
   {
     "id": 6,
-    "brand": "Leica",
-    "model": "SL2-S",
-    "price": 4895,
-    "sensor": "Full Frame",
-    "megapixels": 24.6,
-    "weight": 931,
-    "year": 2021,
-    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871444/eicasl2-5_Background_Removed_vunbsy.png",
-    "useCases": ["studio", "portrait", "documentary"]
-  },
-  {
-    "id": 7,
     "brand": "OM System",
     "model": "OM-1",
     "price": 2199,
@@ -84,19 +72,7 @@
     "useCases": ["wildlife", "sports", "travel"]
   },
   {
-    "id": 8,
-    "brand": "Sigma",
-    "model": "fp L",
-    "price": 2499,
-    "sensor": "Full Frame",
-    "megapixels": 61,
-    "weight": 427,
-    "year": 2021,
-    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871445/sigmafpl_Background_Removed_hrpnvf.png",
-    "useCases": ["studio", "landscape", "video"]
-  },
-  {
-    "id": 9,
+    "id": 7,
     "brand": "Canon",
     "model": "EOS R6 Mark II",
     "price": 2499,
@@ -108,7 +84,7 @@
     "useCases": ["sports", "wedding", "video"]
   },
   {
-    "id": 10,
+    "id": 8,
     "brand": "Sony",
     "model": "A7R V",
     "price": 3899,
@@ -120,7 +96,7 @@
     "useCases": ["landscape", "architecture", "studio"]
   },
   {
-    "id": 11,
+    "id": 9,
     "brand": "Canon",
     "model": "EOS R100",
     "price": 479,
@@ -128,11 +104,11 @@
     "megapixels": 24.1,
     "weight": 356,
     "year": 2023,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000011/canon_r100.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/canoneosr100_Background_Removed_k8cbmj.png",
     "useCases": ["beginner", "travel", "street"]
   },
   {
-    "id": 12,
+    "id": 10,
     "brand": "Nikon",
     "model": "Z30",
     "price": 699,
@@ -140,11 +116,11 @@
     "megapixels": 20.9,
     "weight": 405,
     "year": 2022,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000012/nikon_z30.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/nikonz30_Background_Removed_gbiye6.png",
     "useCases": ["vlogging", "travel", "street"]
   },
   {
-    "id": 13,
+    "id": 11,
     "brand": "Sony",
     "model": "ZV-E10",
     "price": 749,
@@ -152,11 +128,11 @@
     "megapixels": 24.2,
     "weight": 343,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000013/sony_zve10.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967600/sonyzve10_Background_Removed_xtwahj.png",
     "useCases": ["video", "travel", "street"]
   },
   {
-    "id": 14,
+    "id": 12,
     "brand": "Fujifilm",
     "model": "X-S20",
     "price": 1299,
@@ -164,11 +140,11 @@
     "megapixels": 26.1,
     "weight": 491,
     "year": 2023,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000014/fuji_xs20.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujifilmxs20_Background_Removed_x9xh79.png",
     "useCases": ["travel", "street", "vlogging"]
   },
   {
-    "id": 15,
+    "id": 13,
     "brand": "Panasonic",
     "model": "Lumix G100",
     "price": 749,
@@ -176,11 +152,11 @@
     "megapixels": 20.3,
     "weight": 352,
     "year": 2020,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000015/panasonic_g100.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/panasonicg100_Background_Removed_rybd3d.png",
     "useCases": ["vlogging", "travel", "street"]
   },
   {
-    "id": 16,
+    "id": 14,
     "brand": "Canon",
     "model": "EOS R7",
     "price": 1499,
@@ -188,11 +164,11 @@
     "megapixels": 32.5,
     "weight": 612,
     "year": 2022,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000016/canon_r7.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/canonr7_Background_Removed_nd0erv.png",
     "useCases": ["wildlife", "sports", "nature"]
   },
   {
-    "id": 17,
+    "id": 15,
     "brand": "Nikon",
     "model": "Z fc",
     "price": 999,
@@ -200,11 +176,11 @@
     "megapixels": 20.9,
     "weight": 445,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000017/nikon_zfc.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/nikonzfc_Background_Removed_zivgmp.png",
     "useCases": ["street", "travel", "portrait"]
   },
   {
-    "id": 18,
+    "id": 16,
     "brand": "Sony",
     "model": "A6400",
     "price": 898,
@@ -212,11 +188,11 @@
     "megapixels": 24.2,
     "weight": 403,
     "year": 2019,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000018/sony_a6400.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967599/sonya6400_Background_Removed_r0bjih.png",
     "useCases": ["street", "travel", "nature"]
   },
   {
-    "id": 19,
+    "id": 17,
     "brand": "Fujifilm",
     "model": "X-T5",
     "price": 1699,
@@ -224,11 +200,11 @@
     "megapixels": 40,
     "weight": 557,
     "year": 2022,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000019/fuji_xt5.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujixt5_Background_Removed_o3z2em.png",
     "useCases": ["street", "portrait", "landscape"]
   },
   {
-    "id": 20,
+    "id": 18,
     "brand": "Panasonic",
     "model": "Lumix GH6",
     "price": 2199,
@@ -236,23 +212,11 @@
     "megapixels": 25.2,
     "weight": 823,
     "year": 2022,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000020/panasonic_gh6.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/panasonicgh6_Background_Removed_gpmt0v.png",
     "useCases": ["video", "sports", "travel"]
   },
   {
-    "id": 21,
-    "brand": "Leica",
-    "model": "Q3",
-    "price": 5995,
-    "sensor": "Full Frame",
-    "megapixels": 60,
-    "weight": 743,
-    "year": 2023,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000021/leica_q3.png",
-    "useCases": ["street", "portrait", "travel"]
-  },
-  {
-    "id": 22,
+    "id": 19,
     "brand": "OM System",
     "model": "OM-5",
     "price": 1199,
@@ -260,11 +224,11 @@
     "megapixels": 20,
     "weight": 414,
     "year": 2022,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000022/om_system_om5.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/olympusom5_Background_Removed_jybaxw.png",
     "useCases": ["travel", "nature", "street"]
   },
   {
-    "id": 23,
+    "id": 20,
     "brand": "Canon",
     "model": "EOS R3",
     "price": 5999,
@@ -272,11 +236,11 @@
     "megapixels": 24.1,
     "weight": 1015,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000023/canon_r3.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/canoneosr3_Background_Removed_lrglja.png",
     "useCases": ["sports", "wildlife", "news"]
   },
   {
-    "id": 24,
+    "id": 21,
     "brand": "Nikon",
     "model": "Z9",
     "price": 5499,
@@ -284,11 +248,11 @@
     "megapixels": 45.7,
     "weight": 1340,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000024/nikon_z9.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/nikonz9_Background_Removed_uu9jbm.png",
     "useCases": ["sports", "wildlife", "studio"]
   },
   {
-    "id": 25,
+    "id": 22,
     "brand": "Sony",
     "model": "A1",
     "price": 6499,
@@ -296,11 +260,11 @@
     "megapixels": 50.1,
     "weight": 737,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000025/sony_a1.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/sonya1_Background_Removed_ney5xm.png",
     "useCases": ["sports", "wildlife", "studio"]
   },
   {
-    "id": 26,
+    "id": 23,
     "brand": "Fujifilm",
     "model": "GFX100S",
     "price": 5999,
@@ -308,11 +272,11 @@
     "megapixels": 102,
     "weight": 900,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000026/fuji_gfx100s.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujigfx100s_Background_Removed_x01qhz.png",
     "useCases": ["studio", "landscape", "architecture"]
   },
   {
-    "id": 27,
+    "id": 24,
     "brand": "Panasonic",
     "model": "Lumix S1H",
     "price": 3999,
@@ -320,35 +284,11 @@
     "megapixels": 24.2,
     "weight": 1052,
     "year": 2020,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000027/panasonic_s1h.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/lumixs1h_Background_Removed_fl2pyy.png",
     "useCases": ["video", "studio", "nature"]
   },
   {
-    "id": 28,
-    "brand": "Hasselblad",
-    "model": "X2D 100C",
-    "price": 8199,
-    "sensor": "Medium Format",
-    "megapixels": 100,
-    "weight": 895,
-    "year": 2022,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000028/hasselblad_x2d.png",
-    "useCases": ["studio", "architecture", "landscape"]
-  },
-  {
-    "id": 29,
-    "brand": "Sigma",
-    "model": "fp",
-    "price": 1799,
-    "sensor": "Full Frame",
-    "megapixels": 24.6,
-    "weight": 422,
-    "year": 2020,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000029/sigma_fp.png",
-    "useCases": ["video", "travel", "street"]
-  },
-  {
-    "id": 30,
+    "id": 25,
     "brand": "Fujifilm",
     "model": "X-E4",
     "price": 849,
@@ -356,7 +296,7 @@
     "megapixels": 26.1,
     "weight": 364,
     "year": 2021,
-    "image": "https://res.cloudinary.com/demo/image/upload/v1700000030/fuji_xe4.png",
+    "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujifilmxe4_Background_Removed_ytl9q8.png",
     "useCases": ["street", "travel", "portrait"]
   }
 ]

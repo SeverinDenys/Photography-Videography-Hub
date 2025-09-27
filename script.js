@@ -12,15 +12,22 @@ let brandSelect = document.getElementById("brand");
 let matrixSelect = document.getElementById("sensor");
 let priceSelect = document.getElementById("price");
 
+// Attach listeners
 brandSelect.addEventListener("change", applyFilters);
-
 matrixSelect.addEventListener("change", applyFilters);
-
 priceSelect.addEventListener("change", applyFilters);
+
+//  Attach listeners for all checkboxes (once)
+document
+  .querySelectorAll('input[name="usecase"]')
+  .forEach((checkbox) => {
+    checkbox.addEventListener("change", applyFilters);
+  });
 
 function getFilteredCameras() {
   let filtered = camerasData;
 
+  // Brand filter
   if (brandSelect.value) {
     filtered = filtered.filter(
       (camera) =>
@@ -28,29 +35,43 @@ function getFilteredCameras() {
     );
   }
 
-  const normalize = (str) => str.toLowerCase().replace(/[-\s]/g, ""); // removes dashes & spaces
-
+  // Sensor filter
+  const normalize = (str) => str.toLowerCase().replace(/[-\s]/g, "");
   if (matrixSelect.value) {
     const sensorValue = normalize(matrixSelect.value);
     filtered = filtered.filter(
       (camera) => normalize(camera.sensor) === sensorValue
     );
   }
+
   // Price filter
   if (priceSelect.value) {
     const value = priceSelect.value;
-
     if (value.includes("-")) {
-      // Example "500-1000"
       const [min, max] = value.split("-").map(Number);
       filtered = filtered.filter(
         (camera) => camera.price >= min && camera.price <= max
       );
     } else if (value.includes("+")) {
-      // Example "2000+"
-      const min = parseInt(value); // "2000" -> 2000
+      const min = parseInt(value);
       filtered = filtered.filter((camera) => camera.price >= min);
     }
+  }
+
+  // ✅ UseCases filter
+  const checkedBoxes = document.querySelectorAll(
+    'input[name="usecase"]:checked'
+  );
+  const selectedUseCases = Array.from(checkedBoxes).map((checkbox) =>
+    checkbox.value.toLowerCase()
+  );
+
+  if (selectedUseCases.length > 0) {
+    filtered = filtered.filter((camera) =>
+      camera.useCases.some((useCase) =>
+        selectedUseCases.includes(useCase.toLowerCase())
+      )
+    );
   }
 
   return filtered;
@@ -62,7 +83,9 @@ function applyFilters() {
   if (
     !brandSelect.value &&
     !matrixSelect.value &&
-    !priceSelect.value
+    !priceSelect.value &&
+    document.querySelectorAll('input[name="usecase"]:checked')
+      .length === 0
   ) {
     renderCameras(camerasData.slice(0, 10));
   } else {
@@ -94,15 +117,14 @@ const renderCameras = (cameras) => {
     container.classList.add("cameras-container");
 
     container.innerHTML = `
-    <div class= "cameras-photo">
+    <div class="cameras-photo">
       <img src="${camera.image}" alt="${camera.model}">
     </div>
-     <div class="cameras-info">
-        <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
-        <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
-        <p class="camera-price">Price: $${camera.price}</p>
-      </div>
-
+    <div class="cameras-info">
+      <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
+      <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
+      <p class="camera-price">Price: $${camera.price}</p>
+    </div>
     `;
     section.appendChild(container);
   });
@@ -112,5 +134,3 @@ getCameraData().then((data) => {
   camerasData = data;
   applyFilters();
 });
-
-/// extract the function and put there the values for filtering
