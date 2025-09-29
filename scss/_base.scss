@@ -16,6 +16,11 @@
   --color-overlay-dark: rgba(0, 0, 0, 0.5);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
