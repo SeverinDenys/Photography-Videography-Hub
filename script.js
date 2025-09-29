@@ -12,6 +12,22 @@ let brandSelect = document.getElementById("brand");
 let matrixSelect = document.getElementById("sensor");
 let priceSelect = document.getElementById("price");
 
+// hamburger menu logic start
+// Grab elements
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const icon = hamburger.querySelector("i");
+// Toggle menu on click
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("open");
+
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-xmark");
+});
+
+// hamburger menu logic end
+
 // Attach listeners
 brandSelect.addEventListener("change", applyFilters);
 matrixSelect.addEventListener("change", applyFilters);
