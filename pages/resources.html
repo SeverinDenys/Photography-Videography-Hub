@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Resources | Photography Hub</title>
@@ -13,15 +14,16 @@
     <!-- Navigation -->
     <header>
       <nav id="navbar">
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
           <li><a href="../index.html#Intro-section">Home</a></li>
           <li><a href="../index.html#history">History</a></li>
           <li><a href="../index.html#about-me">About</a></li>
           <li><a href="../pages/cameras.html">Photo Cameras</a></li>
           <li>
-            <a href="../pages/resources.html" class="active"
-              >Resources</a
-            >
+            <a href="../pages/resources.html" class="active">Resources</a>
           </li>
         </ul>
       </nav>
@@ -31,9 +33,9 @@
       <section class="resources-intro">
         <h1>Photography & Videography Resources</h1>
         <p>
-          Here you’ll find carefully selected resources to help you
-          grow as a photographer and videographer. Explore tutorials,
-          courses, books, and YouTube channels by the best creators.
+          Here you’ll find carefully selected resources to help you grow as a
+          photographer and videographer. Explore tutorials, courses, books, and
+          YouTube channels by the best creators.
         </p>
       </section>
 
@@ -42,9 +44,7 @@
         <h2>General Photography</h2>
         <ul>
           <li>
-            <a
-              href="https://digital-photography-school.com/"
-              target="_blank"
+            <a href="https://digital-photography-school.com/" target="_blank"
               >Digital Photography School</a
             >
           </li>
@@ -61,16 +61,12 @@
             >
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/@froknowsphoto"
-              target="_blank"
+            <a href="https://www.youtube.com/@froknowsphoto" target="_blank"
               >Jared Polin (FroKnowsPhoto)</a
             >
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/@PeterMcKinnon"
-              target="_blank"
+            <a href="https://www.youtube.com/@PeterMcKinnon" target="_blank"
               >Peter McKinnon</a
             >
           </li>
@@ -82,9 +78,7 @@
         <h2>Portrait Photography</h2>
         <ul>
           <li>
-            <a href="https://www.slrlounge.com/" target="_blank"
-              >SLR Lounge</a
-            >
+            <a href="https://www.slrlounge.com/" target="_blank">SLR Lounge</a>
           </li>
           <li>
             <a href="https://fstoppers.com/" target="_blank"
@@ -92,9 +86,7 @@
             >
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/@MannyOrtiz"
-              target="_blank"
+            <a href="https://www.youtube.com/@MannyOrtiz" target="_blank"
               >Manny Ortiz (YouTube)</a
             >
           </li>
@@ -106,21 +98,15 @@
         <h2>Nature & Landscape</h2>
         <ul>
           <li>
-            <a href="https://www.naturettl.com/" target="_blank"
-              >Nature TTL</a
-            >
+            <a href="https://www.naturettl.com/" target="_blank">Nature TTL</a>
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/@thaticelandicguy"
-              target="_blank"
+            <a href="https://www.youtube.com/@thaticelandicguy" target="_blank"
               >THAT ICELANDIC GUY (YouTube)</a
             >
           </li>
           <li>
-            <a
-              href="https://www.naturephotographers.network/"
-              target="_blank"
+            <a href="https://www.naturephotographers.network/" target="_blank"
               >Nature Photographers Network</a
             >
           </li>
@@ -137,17 +123,13 @@
             >
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/@FilmRiot"
-              target="_blank"
+            <a href="https://www.youtube.com/@FilmRiot" target="_blank"
               >Film Riot (YouTube)</a
             >
           </li>
 
           <li>
-            <a
-              href="https://www.youtube.com/@DanielSchiffer"
-              target="_blank"
+            <a href="https://www.youtube.com/@DanielSchiffer" target="_blank"
               >Daniel Schiffer (YouTube)</a
             >
           </li>
@@ -186,5 +168,7 @@
     <footer>
       <p>© 2025 Photography Hub | Curated by Denys Severin</p>
     </footer>
+
+    <script type="module" src="../script.js"></script>
   </body>
 </html>
