@@ -9,8 +9,11 @@ export function initWorksCarousel() {
 
   let index = 0;
 
+  // function getSlideWidth() {
+  //   return slides[0].offsetWidth + 16; // width + gap
+  // }
   function getSlideWidth() {
-    return slides[0].offsetWidth + 16; // width + gap
+    return slides[0].offsetWidth; // remove +16
   }
 
   function getMaxIndex() {
