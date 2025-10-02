@@ -83,3 +83,25 @@ footer {
   color: var(--color-text-secondary);
   font-size: 0.9rem;
 }
+
+// responsive tablet/mobile devices
+
+@media (max-width: 900px) {
+  #resources .resource-category ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #resources .resource-category ul {
+    grid-template-columns: 1fr;
+  }
+
+  #resources .resources-intro h1 {
+    font-size: 2rem;
+  }
+
+  #resources .resources-intro p {
+    font-size: 1rem;
+  }
+}

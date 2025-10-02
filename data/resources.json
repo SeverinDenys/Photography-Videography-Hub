@@ -1,0 +1,44 @@
+[
+  {
+    "category": "General Photography",
+    "items": [
+      { "name": "Digital Photography School", "url": "https://digital-photography-school.com/" },
+      { "name": "Photography Life", "url": "https://www.photographylife.com/" },
+      { "name": "Annie Leibovitz – Masterclass", "url": "https://www.masterclass.com/classes/annie-leibovitz-teaches-photography" },
+      { "name": "Jared Polin (FroKnowsPhoto)", "url": "https://www.youtube.com/@froknowsphoto" },
+      { "name": "Peter McKinnon", "url": "https://www.youtube.com/@PeterMcKinnon" }
+    ]
+  },
+  {
+    "category": "Portrait Photography",
+    "items": [
+      { "name": "SLR Lounge", "url": "https://www.slrlounge.com/" },
+      { "name": "Fstoppers Tutorials", "url": "https://fstoppers.com/" },
+      { "name": "Manny Ortiz (YouTube)", "url": "https://www.youtube.com/@MannyOrtiz" }
+    ]
+  },
+  {
+    "category": "Nature & Landscape",
+    "items": [
+      { "name": "Nature TTL", "url": "https://www.naturettl.com/" },
+      { "name": "THAT ICELANDIC GUY (YouTube)", "url": "https://www.youtube.com/@thaticelandicguy" },
+      { "name": "Nature Photographers Network", "url": "https://www.naturephotographers.network/" }
+    ]
+  },
+  {
+    "category": "Videography & Filmmaking",
+    "items": [
+      { "name": "Tomorrow’s Filmmakers", "url": "https://tomorrowsfilmmakers.com/" },
+      { "name": "Film Riot (YouTube)", "url": "https://www.youtube.com/@FilmRiot" },
+      { "name": "Daniel Schiffer (YouTube)", "url": "https://www.youtube.com/@DanielSchiffer" }
+    ]
+  },
+  {
+    "category": "Books",
+    "items": [
+      { "name": "On Photography – Susan Sontag", "url": "https://www.amazon.com/On-Photography-Susan-Sontag-audiobook/dp/B005KOL1YK/" },
+      { "name": "Light ― Science & Magic – Fil Hunter", "url": "https://www.amazon.com/Light-Science-Magic-Introduction-Photographic/dp/0367860279/" },
+      { "name": "Photographer – Henri Cartier-Bresson", "url": "https://www.amazon.com/Henri-Cartier-Bresson-Photographer-dp-379138483X/dp/379138483X/" }
+    ]
+  }
+]
