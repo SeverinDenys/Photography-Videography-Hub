@@ -103,7 +103,7 @@ function applyFilters() {
     document.querySelectorAll('input[name="usecase"]:checked')
       .length === 0
   ) {
-    renderCameras(camerasData.slice(0, 10));
+    renderCameras(camerasData.slice(0, 9));
   } else {
     renderCameras(filtered);
   }
@@ -133,6 +133,7 @@ const renderCameras = (cameras) => {
     container.classList.add("cameras-container");
 
     container.innerHTML = `
+    <div class="cameras-container"> 
     <div class="cameras-photo">
       <img src="${camera.image}" alt="${camera.model}">
     </div>
@@ -140,6 +141,7 @@ const renderCameras = (cameras) => {
       <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
       <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
       <p class="camera-price">Price: $${camera.price}</p>
+    </div>
     </div>
     `;
     section.appendChild(container);
