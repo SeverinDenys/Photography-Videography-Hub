@@ -2,6 +2,19 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 console.log("Camera ID from URL:", id);
 
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const icon = hamburger.querySelector("i");
+
+// Toggle menu on click
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("open");
+
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-xmark");
+});
+
 async function getCameraData() {
   try {
     const response = await fetch("/data/cameras.json");

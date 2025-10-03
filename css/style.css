@@ -757,6 +757,7 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 #camera-details .cameras-photo {
+  padding: 2rem 0 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
