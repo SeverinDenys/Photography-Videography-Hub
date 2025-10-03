@@ -34,11 +34,9 @@ matrixSelect.addEventListener("change", applyFilters);
 priceSelect.addEventListener("change", applyFilters);
 
 //  Attach listeners for all checkboxes (once)
-document
-  .querySelectorAll('input[name="usecase"]')
-  .forEach((checkbox) => {
-    checkbox.addEventListener("change", applyFilters);
-  });
+document.querySelectorAll('input[name="usecase"]').forEach((checkbox) => {
+  checkbox.addEventListener("change", applyFilters);
+});
 
 function getFilteredCameras() {
   let filtered = camerasData;
@@ -46,8 +44,7 @@ function getFilteredCameras() {
   // Brand filter
   if (brandSelect.value) {
     filtered = filtered.filter(
-      (camera) =>
-        camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
+      (camera) => camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
     );
   }
 
@@ -100,8 +97,7 @@ function applyFilters() {
     !brandSelect.value &&
     !matrixSelect.value &&
     !priceSelect.value &&
-    document.querySelectorAll('input[name="usecase"]:checked')
-      .length === 0
+    document.querySelectorAll('input[name="usecase"]:checked').length === 0
   ) {
     renderCameras(camerasData.slice(0, 9));
   } else {
@@ -144,6 +140,15 @@ const renderCameras = (cameras) => {
     </div>
     </div>
     `;
+
+    //Attach click
+    container.addEventListener("click", () => {
+      console.log("clicked:", camera);
+      if (camera) {
+        window.location.href = `/pages/camera.html?id=${camera.id}`;
+      }
+    });
+
     section.appendChild(container);
   });
 };
