@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Photography Hub</title>
+  </head>
+  <body>
+    <main>
+      <!-- Navigation start-->
+      <header>
+        <nav id="navbar">
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html#Intro-section">Home</a></li>
+            <li><a href="../index.html#history">History</a></li>
+            <li><a href="../index.html#about-me">About</a></li>
+            <li>
+              <a href="../pages/cameras.html">Photo Cameras</a>
+            </li>
+            <li><a href="/pages/resources.html">Resources</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Navigation end-->
+      <!-- Top heading -->
+      <section id="camera-intro">
+        <h2>The Camera That You Picked</h2>
+        <p>
+          Here are the details of the camera you selected. Explore its features
+          below:
+        </p>
+      </section>
+
+      <!-- Camera details injected by JS -->
+      <section id="camera-details"></section>
+
+      <!-- Recommended lenses -->
+      <section id="camera-lenses">
+        <h3>Recommended Lens Options</h3>
+        <p>
+          For this camera, we recommend the following lenses to get the most out
+          of your gear:
+        </p>
+        <ul>
+          <li>📷 24-70mm f/2.8 — great all-rounder</li>
+          <li>🌆 16-35mm f/4 — perfect for landscapes & architecture</li>
+          <li>🦅 70-200mm f/2.8 — excellent for wildlife & sports</li>
+          <li>🎭 50mm f/1.8 — affordable portrait lens</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="../js/camera.js"></script>
+  </body>
+</html>
