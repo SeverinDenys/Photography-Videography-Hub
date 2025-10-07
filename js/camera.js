@@ -15,6 +15,26 @@ hamburger.addEventListener("click", () => {
   icon.classList.toggle("fa-xmark");
 });
 
+// getting lenses json apis
+async function getLensesData() {
+  try {
+    const response = await fetch("/data/lenses.json");
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`HTTP ${response.status}: ${errorText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Fetch Error:", error);
+    return [];
+  }
+}
+
+getLensesData().then((data) => {
+  console.log("lenses obj:", data);
+});
+
+// getting the cameras json apis
 async function getCameraData() {
   try {
     const response = await fetch("/data/cameras.json");
@@ -32,11 +52,9 @@ async function getCameraData() {
 
 getCameraData().then((data) => {
   let filteredCamera = data.find((camera) => {
-    console.log(camera.id);
     return camera.id === Number(id);
   });
 
-  console.log("filtered camera:", filteredCamera);
   displayCamera(filteredCamera);
 });
 
@@ -46,6 +64,10 @@ const displayCamera = (camera) => {
 
   container.innerHTML = `
     <div class="cameras-container"> 
+    <div class="camera-fullDesk">
+    <p>${camera.fullDescription}</p>
+     
+    </div>
     <div class="cameras-photo">
       <img src="${camera.image}" alt="${camera.model}">
     </div>

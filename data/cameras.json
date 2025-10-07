@@ -9,7 +9,8 @@
     "weight": 738,
     "year": 2020,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758817047/eos_r5_body__azrm5w.png",
-    "useCases": ["portrait", "wildlife", "nature"]
+    "useCases": ["portrait", "wildlife", "nature"],
+    "fullDescription": "The Canon EOS R5 is a powerhouse for professionals and enthusiasts alike. Its 45MP full-frame sensor delivers incredible detail and dynamic range for both photos and 8K video. Autofocus is lightning fast, even in low light, making it perfect for wildlife and portraits. The in-body image stabilization helps you capture sharp shots handheld. It’s built solidly and weather-sealed for outdoor use. The R5 combines speed, precision, and versatility like few others in its class."
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "weight": 659,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758817445/sonya7IV_oo2bdx.png",
-    "useCases": ["portrait", "street", "travel"]
+    "useCases": ["portrait", "street", "travel"],
+    "fullDescription": "Sony’s A7 IV strikes an excellent balance between performance, quality, and price. The 33MP full-frame sensor offers detailed images and beautiful color science. Its hybrid autofocus system is among the best in the industry. The camera’s video features, including 4K60, make it a top choice for hybrid shooters. Ergonomics and menu improvements make it more intuitive than previous models. The A7 IV is a true all-rounder for creators and travelers."
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "weight": 910,
     "year": 2023,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871444/nikony8_Background_Removed_dpulre.png",
-    "useCases": ["sports", "wildlife", "studio"]
+    "useCases": ["sports", "wildlife", "studio"],
+    "fullDescription": "The Nikon Z8 brings flagship performance in a smaller, more affordable body. Its 45.7MP stacked sensor and fast autofocus make it ideal for sports and wildlife. The build quality is excellent, with full weather sealing. It shares much of its DNA with the Z9, offering outstanding stills and 8K video. The EVF and rear LCD are bright and sharp. For photographers needing top-tier results without the bulk of a flagship, the Z8 is a perfect fit."
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "weight": 660,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871444/fujiXH2_Background_Removed_jc120g.png",
-    "useCases": ["travel", "street", "portrait"]
+    "useCases": ["travel", "street", "portrait"],
+    "fullDescription": "The Fujifilm X-H2 packs a 40MP APS-C sensor, giving extraordinary resolution for its size. It’s designed for hybrid creators who value both stills and video. The body is robust and ergonomic, making it a joy to use on long shoots. Fujifilm’s color science gives your images a beautiful film-like look straight out of camera. It also offers advanced video specs like 8K recording. The X-H2 is a high-performance tool that rewards creativity."
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "weight": 740,
     "year": 2023,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871444/lumixs5II_Background_Removed_m56uoi.png",
-    "useCases": ["video", "travel", "portrait"]
+    "useCases": ["video", "travel", "portrait"],
+    "fullDescription": "The Panasonic Lumix S5 II is one of the most balanced hybrid cameras on the market. It features a 24MP full-frame sensor with impressive dynamic range and color depth. Its new phase-detect autofocus finally matches the competition in speed and accuracy. The S5 II also excels in video, offering 6K recording and advanced codecs. The compact body and weather sealing make it perfect for travel. It’s a solid performer for both professionals and enthusiasts."
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "weight": 599,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871444/olympusom1_Background_Removed_ucjxhr.png",
-    "useCases": ["wildlife", "sports", "travel"]
+    "useCases": ["wildlife", "sports", "travel"],
+    "fullDescription": "The OM System OM-1 is a compact yet powerful Micro Four Thirds camera. It features a stacked sensor that delivers incredible burst speeds and fast autofocus. Wildlife and sports photographers love its reach advantage due to smaller lenses. Weather sealing and durability make it ready for any adventure. The in-body stabilization is one of the best available. It’s a small camera that performs like a much larger one."
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "weight": 670,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871444/canonr6II_Background_Removed_mzrbst.png",
-    "useCases": ["sports", "wedding", "video"]
+    "useCases": ["sports", "wedding", "video"],
+    "fullDescription": "Canon’s EOS R6 Mark II refines everything that made the original great. Its 24MP sensor and advanced autofocus perform brilliantly in low light and fast action. The camera offers excellent 4K video capabilities with minimal rolling shutter. Ergonomics and handling are top-notch, fitting comfortably in hand. Dual card slots and strong battery life make it dependable for professionals. The R6 II is a reliable choice for weddings, sports, and hybrid work."
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "weight": 723,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758871445/sonya7r5_Background_Removed_n2voep.png",
-    "useCases": ["landscape", "architecture", "studio"]
+    "useCases": ["landscape", "architecture", "studio"],
+    "fullDescription": "The Sony A7R V redefines high-resolution photography with a 61MP sensor. Its new AI-powered autofocus system tracks subjects with incredible accuracy. The detail and color from its files are unmatched in this price range. Video features like 8K capture add extra versatility. The 4-axis articulating screen and improved stabilization make it user-friendly. It’s perfect for landscape, architecture, and studio photographers who demand maximum image quality."
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "weight": 356,
     "year": 2023,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/canoneosr100_Background_Removed_k8cbmj.png",
-    "useCases": ["beginner", "travel", "street"]
+    "useCases": ["beginner", "travel", "street"],
+    "fullDescription": "The Canon EOS R100 is an affordable entry into the mirrorless world. It offers Canon’s reliable image quality with a simple, beginner-friendly interface. The 24MP APS-C sensor produces sharp and vibrant photos. Its compact and lightweight body is great for travel and daily use. Despite its price, it delivers strong autofocus and color science. It’s ideal for anyone starting their photography journey."
   },
   {
     "id": 10,
@@ -117,7 +126,8 @@
     "weight": 405,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/nikonz30_Background_Removed_gbiye6.png",
-    "useCases": ["vlogging", "travel", "street"]
+    "useCases": ["vlogging", "travel", "street"],
+    "fullDescription": "The Nikon Z30 is a compact mirrorless camera made for content creators. It’s lightweight and easy to use, perfect for vlogging and travel. The 20.9MP sensor offers solid image quality and clean video output. It features a flip-out screen and good battery life for on-the-go shooting. Despite its size, it includes advanced autofocus and color accuracy. The Z30 makes creating high-quality content simple and enjoyable."
   },
   {
     "id": 11,
@@ -129,7 +139,8 @@
     "weight": 343,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967600/sonyzve10_Background_Removed_xtwahj.png",
-    "useCases": ["video", "travel", "street"]
+    "useCases": ["video", "travel", "street"],
+    "fullDescription": "Sony’s ZV-E10 is designed specifically for vloggers and creators. It features a 24MP APS-C sensor with strong performance in both photo and video. The flip screen, great mic options, and real-time eye autofocus make it ideal for self-shooting. It’s lightweight and travel-friendly without sacrificing quality. You can shoot 4K video with excellent clarity. It’s a great all-round camera for beginners and content creators alike."
   },
   {
     "id": 12,
@@ -141,7 +152,8 @@
     "weight": 491,
     "year": 2023,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujifilmxs20_Background_Removed_x9xh79.png",
-    "useCases": ["travel", "street", "vlogging"]
+    "useCases": ["travel", "street", "vlogging"],
+    "fullDescription": "The Fujifilm X-S20 is a small camera with big capabilities. Its 26MP sensor delivers beautiful detail and Fujifilm’s signature color science. With improved autofocus and IBIS, it’s perfect for travel and handheld shooting. It can record 6K video internally, offering cinematic potential in a compact body. The battery life is excellent for its size. It’s a creative powerhouse for both photo and video enthusiasts."
   },
   {
     "id": 13,
@@ -153,7 +165,8 @@
     "weight": 352,
     "year": 2020,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/panasonicg100_Background_Removed_rybd3d.png",
-    "useCases": ["vlogging", "travel", "street"]
+    "useCases": ["vlogging", "travel", "street"],
+    "fullDescription": "The Panasonic Lumix G100 is built for vloggers and travelers who need light gear. Its compact Micro Four Thirds design still delivers excellent image quality. The directional microphone captures clear audio even outdoors. The flip screen and ergonomic grip make it easy to handle. It’s intuitive for beginners and flexible for advanced users. Perfect for documenting trips, stories, and everyday life."
   },
   {
     "id": 14,
@@ -165,7 +178,8 @@
     "weight": 612,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/canonr7_Background_Removed_nd0erv.png",
-    "useCases": ["wildlife", "sports", "nature"]
+    "useCases": ["wildlife", "sports", "nature"],
+    "fullDescription": "The Canon EOS R7 combines speed, precision, and portability. Its 32.5MP APS-C sensor offers excellent detail and reach for wildlife and sports. Autofocus is incredibly fast, tracking moving subjects with ease. The in-body stabilization allows for sharp handheld shots. The R7’s ergonomics and battery life make it great for long days in the field. It’s one of the best APS-C cameras Canon has ever made."
   },
   {
     "id": 15,
@@ -177,7 +191,8 @@
     "weight": 445,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/nikonzfc_Background_Removed_zivgmp.png",
-    "useCases": ["street", "travel", "portrait"]
+    "useCases": ["street", "travel", "portrait"],
+    "fullDescription": "The Nikon Z fc combines retro design with modern technology. It’s stylish yet powerful, featuring a 20.9MP sensor and fast autofocus. The controls mimic classic Nikon film cameras, giving a tactile shooting experience. Despite its looks, it performs beautifully for travel and portraits. The image quality is crisp and colors are vivid. It’s a camera that makes photography feel personal and fun."
   },
   {
     "id": 16,
@@ -189,7 +204,8 @@
     "weight": 403,
     "year": 2019,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967599/sonya6400_Background_Removed_r0bjih.png",
-    "useCases": ["street", "travel", "nature"]
+    "useCases": ["street", "travel", "nature"],
+    "fullDescription": "The Sony A6400 remains one of the most versatile APS-C cameras. Its 24MP sensor and exceptional autofocus make it fast and reliable. The compact body is great for street and travel photography. It offers 4K video with accurate colors and low noise. The flip-up screen makes it ideal for vlogging. Despite its age, it’s still a top performer for creators on the go."
   },
   {
     "id": 17,
@@ -201,7 +217,8 @@
     "weight": 557,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujixt5_Background_Removed_o3z2em.png",
-    "useCases": ["street", "portrait", "landscape"]
+    "useCases": ["street", "portrait", "landscape"],
+    "fullDescription": "The Fujifilm X-T5 delivers top-tier performance in a compact form. With a 40MP sensor, it captures incredible detail and dynamic range. Its traditional dials and controls make it fun to shoot with. The image quality and color tones are simply stunning. It’s well-balanced for stills and 6.2K video work. A perfect mix of retro design and modern capability."
   },
   {
     "id": 18,
@@ -213,7 +230,8 @@
     "weight": 823,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/panasonicgh6_Background_Removed_gpmt0v.png",
-    "useCases": ["video", "sports", "travel"]
+    "useCases": ["video", "sports", "travel"],
+    "fullDescription": "The Panasonic Lumix GH6 is a dream for filmmakers. It features a 25MP sensor optimized for video, offering high bitrates and 5.7K recording. The dynamic range and color depth are impressive. It’s rugged, reliable, and built to handle demanding shoots. In-body stabilization and strong heat management make it dependable for long recordings. A true hybrid tool for creators who prioritize video quality."
   },
   {
     "id": 19,
@@ -225,7 +243,8 @@
     "weight": 414,
     "year": 2022,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/olympusom5_Background_Removed_jybaxw.png",
-    "useCases": ["travel", "nature", "street"]
+    "useCases": ["travel", "nature", "street"],
+    "fullDescription": "The OM System OM-5 is the ultimate travel companion. It’s lightweight, weather-sealed, and packed with advanced features. The 20MP sensor provides clean, detailed images even in challenging light. Its compact Micro Four Thirds system makes it easy to carry anywhere. Image stabilization is outstanding, perfect for handheld shots. A versatile camera for explorers who value mobility and performance."
   },
   {
     "id": 20,
@@ -237,7 +256,8 @@
     "weight": 1015,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/canoneosr3_Background_Removed_lrglja.png",
-    "useCases": ["sports", "wildlife", "news"]
+    "useCases": ["sports", "wildlife", "news"],
+    "fullDescription": "The Canon EOS R3 is a flagship built for speed and reliability. Its 24MP stacked sensor and eye-controlled autofocus make it unique. The build quality is unmatched, designed for professional sports and news photographers. It shoots at 30fps silently with no blackout. The handling is superb, even with large lenses. For demanding environments, the R3 delivers flawless performance."
   },
   {
     "id": 21,
@@ -249,7 +269,8 @@
     "weight": 1340,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/nikonz9_Background_Removed_uu9jbm.png",
-    "useCases": ["sports", "wildlife", "studio"]
+    "useCases": ["sports", "wildlife", "studio"],
+    "fullDescription": "The Nikon Z9 sets a new standard for mirrorless cameras. With a 45.7MP stacked sensor and blackout-free viewfinder, it’s built for professionals. It shoots 8K video and handles continuous bursts effortlessly. Autofocus is among the best on the market. The solid, weather-sealed body is made for the toughest conditions. It’s Nikon’s most advanced and dependable camera to date."
   },
   {
     "id": 22,
@@ -261,7 +282,8 @@
     "weight": 737,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967598/sonya1_Background_Removed_ney5xm.png",
-    "useCases": ["sports", "wildlife", "studio"]
+    "useCases": ["sports", "wildlife", "studio"],
+    "fullDescription": "Sony’s Alpha 1 is the definition of no-compromise performance. It delivers 50MP stills and 8K video from the same sensor. The autofocus system is lightning fast and incredibly precise. Continuous shooting at 30fps captures every split-second of action. Despite its power, it remains compact and ergonomic. It’s built for professionals who demand excellence in both photo and video."
   },
   {
     "id": 23,
@@ -273,7 +295,8 @@
     "weight": 900,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujigfx100s_Background_Removed_x01qhz.png",
-    "useCases": ["studio", "landscape", "architecture"]
+    "useCases": ["studio", "landscape", "architecture"],
+    "fullDescription": "The Fujifilm GFX100S redefines medium-format portability. Its 102MP sensor produces images with stunning depth and clarity. Dynamic range and color rendition are second to none. The body is compact and easy to handle for a medium-format system. It’s ideal for landscapes, fashion, and studio work. A camera that brings large-format quality to a practical everyday tool."
   },
   {
     "id": 24,
@@ -285,7 +308,8 @@
     "weight": 1052,
     "year": 2020,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967597/lumixs1h_Background_Removed_fl2pyy.png",
-    "useCases": ["video", "studio", "nature"]
+    "useCases": ["video", "studio", "nature"],
+    "fullDescription": "The Panasonic Lumix S1H is a video powerhouse loved by filmmakers. It offers a 24MP full-frame sensor with exceptional dynamic range and color depth. The camera records 6K video internally with professional-grade codecs. It’s robust, heavy, and built to handle long production days. The color reproduction and heat management are excellent. For cinematic creators, the S1H is a trusted companion on set."
   },
   {
     "id": 25,
@@ -297,6 +321,7 @@
     "weight": 364,
     "year": 2021,
     "image": "https://res.cloudinary.com/ddxkmsae2/image/upload/v1758967596/fujifilmxe4_Background_Removed_ytl9q8.png",
-    "useCases": ["street", "travel", "portrait"]
+    "useCases": ["street", "travel", "portrait"],
+    "fullDescription": "The Fujifilm X-E4 is a minimalist’s dream camera. It’s slim, lightweight, and produces gorgeous images with its 26MP sensor. Fujifilm’s film simulations give photos a nostalgic, cinematic character. The flip-up screen adds flexibility for vlogging and creative angles. Despite its compactness, it’s powerful for both stills and 4K video. The X-E4 inspires creativity through simplicity and style."
   }
 ]
