@@ -2,6 +2,7 @@
   {
     "id": 1,
     "brand": "Canon",
+        "mount": "Canon RF",
     "model": "RF 50mm f/1.8 STM",
     "type": "Prime",
     "focalLength": "50mm",
@@ -15,6 +16,7 @@
   {
     "id": 2,
     "brand": "Canon",
+        "mount": "Canon RF",
     "model": "RF 85mm f/1.2L USM",
     "type": "Prime",
     "focalLength": "85mm",

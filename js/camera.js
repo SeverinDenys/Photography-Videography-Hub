@@ -1,6 +1,5 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
-console.log("Camera ID from URL:", id);
 
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
@@ -30,10 +29,6 @@ async function getLensesData() {
   }
 }
 
-getLensesData().then((data) => {
-  console.log("lenses obj:", data);
-});
-
 // getting the cameras json apis
 async function getCameraData() {
   try {
@@ -56,7 +51,20 @@ getCameraData().then((data) => {
   });
 
   displayCamera(filteredCamera);
+  displayLensesForCamera(filteredCamera);
 });
+
+async function displayLensesForCamera(camera) {
+  try {
+    const data = await getLensesData();
+    const filteredLens = data.filter(
+      (lens) => lens.brand === camera.brand
+    );
+    console.log("filtered lenses:", filteredLens);
+  } catch (error) {
+    console.error("Error displaying lenses:", error);
+  }
+}
 
 const displayCamera = (camera) => {
   const container = document.getElementById("camera-details");
