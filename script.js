@@ -12,32 +12,34 @@ let brandSelect = document.getElementById("brand");
 let matrixSelect = document.getElementById("sensor");
 let priceSelect = document.getElementById("price");
 
-// hamburger menu logic start
-// Grab elements
+// =============================
+// Hamburger menu logic
+// =============================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 const icon = hamburger.querySelector("i");
-// Toggle menu on click
+
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   hamburger.classList.toggle("open");
-
   icon.classList.toggle("fa-bars");
   icon.classList.toggle("fa-xmark");
 });
 
-// hamburger menu logic end
-
-// Attach listeners
+// =============================
+// Filter listeners
+// =============================
 brandSelect.addEventListener("change", applyFilters);
 matrixSelect.addEventListener("change", applyFilters);
 priceSelect.addEventListener("change", applyFilters);
 
-//  Attach listeners for all checkboxes (once)
 document.querySelectorAll('input[name="usecase"]').forEach((checkbox) => {
   checkbox.addEventListener("change", applyFilters);
 });
 
+// =============================
+// Filtering logic
+// =============================
 function getFilteredCameras() {
   let filtered = camerasData;
 
@@ -71,7 +73,7 @@ function getFilteredCameras() {
     }
   }
 
-  // ✅ UseCases filter
+  // UseCases filter
   const checkedBoxes = document.querySelectorAll(
     'input[name="usecase"]:checked'
   );
@@ -105,6 +107,9 @@ function applyFilters() {
   }
 }
 
+// =============================
+// Fetch cameras
+// =============================
 async function getCameraData() {
   try {
     const response = await fetch("/data/cameras.json");
@@ -120,6 +125,9 @@ async function getCameraData() {
   }
 }
 
+// =============================
+// Render cameras
+// =============================
 const renderCameras = (cameras) => {
   const section = document.getElementById("cameras");
   section.innerHTML = "";
@@ -129,30 +137,46 @@ const renderCameras = (cameras) => {
     container.classList.add("cameras-container");
 
     container.innerHTML = `
-    <div class="cameras-container"> 
-    <div class="cameras-photo">
-      <img src="${camera.image}" alt="${camera.model}">
-    </div>
-    <div class="cameras-info">
-      <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
-      <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
-      <p class="camera-price">Price: $${camera.price}</p>
-    </div>
-    </div>
+      <div class="cameras-container"> 
+        <div class="cameras-photo">
+          <img src="${camera.image}" alt="${camera.model}">
+        </div>
+        <div class="cameras-info">
+          <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
+          <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
+          <p class="camera-price">Price: $${camera.price}</p>
+        </div>
+      </div>
     `;
 
-    //Attach click
+    // send only brand, sensor, and use cases
     container.addEventListener("click", () => {
       console.log("clicked:", camera);
-      if (camera) {
-        window.location.href = `/pages/camera.html?id=${camera.id}`;
-      }
+
+      const selectedBrand = brandSelect.value;
+      const selectedSensor = matrixSelect.value;
+      const selectedUseCases = Array.from(
+        document.querySelectorAll('input[name="usecase"]:checked')
+      ).map((checkbox) => checkbox.value);
+
+      const queryParams = new URLSearchParams({
+        id: camera.id,
+        brand: selectedBrand || "",
+        sensor: selectedSensor || "",
+        use: selectedUseCases.join(","),
+      });
+
+      // Redirect with filters in URL (no price)
+      window.location.href = `/pages/camera.html?${queryParams.toString()}`;
     });
 
     section.appendChild(container);
   });
 };
 
+// =============================
+// Init
+// =============================
 getCameraData().then((data) => {
   camerasData = data;
   applyFilters();
