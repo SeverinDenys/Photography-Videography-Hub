@@ -1,3 +1,6 @@
+// =============================
+// Camera Details Section
+// =============================
 #camera-details {
   padding: 2rem;
   margin: auto;
@@ -6,6 +9,17 @@
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  .camera-fullDesk {
+    p {
+      margin: auto;
+      text-align: center;
+      padding: 0.5rem;
+      max-width: 70rem;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
 
   .cameras-photo {
     padding: 2rem 0 1rem 0;
@@ -49,6 +63,9 @@
   }
 }
 
+// =============================
+// Camera Intro Section
+// =============================
 #camera-intro {
   text-align: center;
   margin: 0 auto 1rem auto;
@@ -68,49 +85,108 @@
   }
 }
 
-// Lens recommendations
+// =============================
+// Lens Recommendations Section
+// =============================
 #camera-lenses {
   margin: 3rem auto;
   padding: 2rem;
-  max-width: 70rem;
-  background: rgba(255, 255, 255, 0.85);
+  max-width: 80rem;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
 
   h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--color-accent);
+    font-size: 1.8rem;
     font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
   }
 
   p {
-    text-align: center;
     font-size: 1rem;
-    margin-bottom: 1rem;
     color: var(--color-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
   }
 
-  ul {
+  // Lens grid
+  .lenses-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
 
-    li {
-      background: #fff;
-      padding: 0.8rem 1rem;
+  // Individual lens cards
+  .lens-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 1rem;
       border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      background: #fafafa;
+      padding: 0.5rem;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
       font-size: 0.95rem;
+      color: var(--color-text-light);
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+
+    .price {
+      font-weight: 700;
       color: var(--color-dark);
+      margin-top: 0.5rem;
     }
   }
 }
 
+// =============================
+// Fade-in Animation
+// =============================
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// =============================
 // Responsive Tablet
+// =============================
 @media (max-width: 768px) {
   #camera-details {
     flex-direction: column;
@@ -134,12 +210,44 @@
     }
   }
 
-  #camera-lenses ul {
-    grid-template-columns: 1fr;
+  #camera-lenses {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .lens-card {
+      max-width: 100%;
+      padding: 1.2rem;
+
+      img {
+        height: 150px;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .price {
+        font-size: 1rem;
+      }
+    }
   }
 }
 
+// =============================
 // Responsive Mobile
+// =============================
 @media (max-width: 480px) {
   #camera-details {
     padding: 1rem;
@@ -173,7 +281,18 @@
     }
 
     p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+    }
+
+    .lenses-container {
+      gap: 1.2rem;
+    }
+
+    .lens-card {
+      padding: 1rem;
+      img {
+        height: 130px;
+      }
     }
   }
 }
