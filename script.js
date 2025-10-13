@@ -33,9 +33,11 @@ brandSelect.addEventListener("change", applyFilters);
 matrixSelect.addEventListener("change", applyFilters);
 priceSelect.addEventListener("change", applyFilters);
 
-document.querySelectorAll('input[name="usecase"]').forEach((checkbox) => {
-  checkbox.addEventListener("change", applyFilters);
-});
+document
+  .querySelectorAll('input[name="usecase"]')
+  .forEach((checkbox) => {
+    checkbox.addEventListener("change", applyFilters);
+  });
 
 // =============================
 // Filtering logic
@@ -46,7 +48,8 @@ function getFilteredCameras() {
   // Brand filter
   if (brandSelect.value) {
     filtered = filtered.filter(
-      (camera) => camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
+      (camera) =>
+        camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
     );
   }
 
@@ -99,7 +102,8 @@ function applyFilters() {
     !brandSelect.value &&
     !matrixSelect.value &&
     !priceSelect.value &&
-    document.querySelectorAll('input[name="usecase"]:checked').length === 0
+    document.querySelectorAll('input[name="usecase"]:checked')
+      .length === 0
   ) {
     renderCameras(camerasData.slice(0, 9));
   } else {
@@ -137,18 +141,15 @@ const renderCameras = (cameras) => {
     container.classList.add("cameras-container");
 
     container.innerHTML = `
-      <div class="cameras-container"> 
-        <div class="cameras-photo">
-          <img src="${camera.image}" alt="${camera.model}">
-        </div>
-        <div class="cameras-info">
-          <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
-          <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
-          <p class="camera-price">Price: $${camera.price}</p>
-        </div>
-      </div>
-    `;
-
+  <div class="cameras-photo">
+    <img src="${camera.image}" alt="${camera.model}">
+  </div>
+  <div class="cameras-info">
+    <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
+    <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
+    <p class="camera-price">Price: $${camera.price}</p>
+  </div>
+`;
     // send only brand, sensor, and use cases
     container.addEventListener("click", () => {
       console.log("clicked:", camera);
