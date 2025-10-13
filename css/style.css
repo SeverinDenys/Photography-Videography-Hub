@@ -46,7 +46,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
 }
 #navbar .hamburger {
   display: none;
@@ -446,7 +445,6 @@ body {
   min-width: 28rem;
   overflow: hidden;
   border-radius: 0.8rem;
-  box-shadow: 0 6px 2rem rgba(0, 0, 0, 0.15);
   background: #fff;
 }
 #my-works .works-carousel .works-slide img {
@@ -804,6 +802,7 @@ body {
 #cameras .cameras-info h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: var(--color-accent);
 }
 #cameras .cameras-info p {
   font-size: 0.9rem;
@@ -844,7 +843,7 @@ body {
   max-width: 70rem;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 #camera-details .camera-fullDesk p {
   margin: auto;
