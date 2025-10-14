@@ -212,6 +212,30 @@ body {
   margin-bottom: 0;
   color: var(--color-text-light);
 }
+#Intro-section .hub-description {
+  background: #ffffff;
+  padding: 3rem 4rem;
+  margin: 0 auto 6rem;
+  max-width: 100rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+#Intro-section .hub-description h2 {
+  color: var(--color-accent);
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
+#Intro-section .hub-description p {
+  color: var(--color-text-light);
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+}
+#Intro-section .hub-description p strong {
+  color: var(--color-text-main);
+}
 #Intro-section .intro-carousel {
   position: relative;
   width: 100%;
@@ -269,6 +293,16 @@ body {
   #Intro-section .intro-text p {
     font-size: 1.3rem;
   }
+  #Intro-section .hub-description {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  #Intro-section .hub-description h2 {
+    font-size: 2.2rem;
+  }
+  #Intro-section .hub-description p {
+    font-size: 1.5rem;
+  }
   #Intro-section .intro-carousel {
     height: 100vh;
   }
@@ -293,6 +327,16 @@ body {
   #Intro-section .intro-text p {
     font-size: 1.4rem;
     line-height: 1.4;
+  }
+  #Intro-section .hub-description {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  #Intro-section .hub-description h2 {
+    font-size: 1.9rem;
+  }
+  #Intro-section .hub-description p {
+    font-size: 1.4rem;
   }
   #Intro-section .intro-carousel {
     height: 100vh;
@@ -538,6 +582,7 @@ body {
 #history h2 {
   text-align: center;
   font-size: 3.2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   color: var(--color-accent);
 }
@@ -774,8 +819,9 @@ body {
 
 #cameras {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center; /* centers each card within its grid cell */
   max-width: 100rem;
   gap: 2rem;
   margin: 2rem auto;
@@ -784,7 +830,7 @@ body {
 #cameras .cameras-container {
   cursor: pointer;
   background: #fff;
-  max-width: 250px;
+  max-width: 25rem;
   padding: 1rem;
   text-align: center;
   font-size: 1rem;
@@ -800,12 +846,12 @@ body {
   padding: 0;
 }
 #cameras .cameras-info h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: var(--color-accent);
 }
 #cameras .cameras-info p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin: 0.2rem 0;
 }
 
@@ -850,7 +896,7 @@ body {
   text-align: center;
   padding: 0.5rem;
   max-width: 70rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: left;
 }
 #camera-details .cameras-photo {
@@ -896,13 +942,13 @@ body {
   max-width: 60rem;
 }
 #camera-intro h2 {
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: var(--color-accent);
   margin-bottom: 0.8rem;
 }
 #camera-intro p {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   color: var(--color-text-light);
 }
 
@@ -936,8 +982,7 @@ body {
 }
 #camera-lenses .lens-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem 1rem;
   width: 100%;
   max-width: 260px;
@@ -1087,7 +1132,7 @@ body {
   color: var(--color-accent);
 }
 #resources .resources-intro p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: var(--color-text-secondary);
   line-height: 1.6;
 }
@@ -1130,7 +1175,7 @@ body {
   border-radius: 8px;
   color: var(--color-text-main);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
