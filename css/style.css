@@ -209,8 +209,52 @@ body {
 #Intro-section .intro-text p {
   font-size: 1.7rem;
   line-height: 1.4;
-  margin-bottom: 0;
+  margin: 0 auto;
   color: var(--color-text-light);
+  max-width: 70rem;
+  text-align: left;
+}
+#Intro-section .intro-text .intro-bridge {
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+#Intro-section .intro-text .intro-bridge h3 {
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  margin-bottom: 1.6rem;
+}
+#Intro-section .intro-text .intro-bridge p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.4rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta {
+  margin-top: 1.8rem;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button i {
+  margin-left: 0.6rem;
+  transition: transform 0.3s ease;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button:hover i {
+  transform: translateX(4px);
 }
 #Intro-section .hub-description {
   background: #ffffff;
@@ -293,6 +337,19 @@ body {
   #Intro-section .intro-text p {
     font-size: 1.3rem;
   }
+  #Intro-section .intro-text .intro-bridge {
+    padding-top: 1.5rem;
+  }
+  #Intro-section .intro-text .intro-bridge h3 {
+    font-size: 2.2rem;
+  }
+  #Intro-section .intro-text .intro-bridge p {
+    font-size: 1.5rem;
+  }
+  #Intro-section .intro-text .intro-bridge .cta-button {
+    font-size: 1.5rem;
+    padding: 0.9rem 2rem;
+  }
   #Intro-section .hub-description {
     padding: 2rem;
     max-width: 90%;
@@ -327,6 +384,18 @@ body {
   #Intro-section .intro-text p {
     font-size: 1.4rem;
     line-height: 1.4;
+  }
+  #Intro-section .intro-text .intro-bridge {
+    padding-top: 1rem;
+  }
+  #Intro-section .intro-text .intro-bridge h3 {
+    font-size: 2rem;
+  }
+  #Intro-section .intro-text .intro-bridge p {
+    font-size: 1.4rem;
+  }
+  #Intro-section .intro-text .intro-bridge .cta-button {
+    font-size: 1.4rem;
   }
   #Intro-section .hub-description {
     padding: 1.5rem;
@@ -652,6 +721,55 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   display: block;
   margin-left: auto;
+}
+
+.history-bridge {
+  margin: 2rem auto 3rem;
+  max-width: 120rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.history-bridge h3 {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.history-bridge p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.8rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.history-bridge .history-cta {
+  margin-top: 2rem;
+}
+.history-bridge .history-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.history-bridge .history-cta .cta-button i {
+  margin-left: 0.6rem;
+  transition: transform 0.3s ease;
+}
+.history-bridge .history-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+.history-bridge .history-cta .cta-button:hover i {
+  transform: translateX(4px);
 }
 
 /* Tablet and Mobile */
