@@ -15,7 +15,6 @@
   .about-container {
     display: flex;
     justify-content: center;
-
     gap: 4rem;
     align-items: center;
     max-width: 120rem;
@@ -36,11 +35,13 @@
     .about-text {
       max-width: 60rem;
       text-align: left;
+
       h2 {
         font-size: 2.8rem;
         color: var(--color-accent);
         margin-bottom: 1rem;
       }
+
       p {
         font-size: 1.7rem;
         color: var(--color-text-light);
@@ -59,11 +60,9 @@
       }
     }
   }
-}
 
-/* Tablet */
-@media (max-width: 900px) {
-  #about-me {
+  /* Tablet */
+  @media (max-width: 900px) {
     padding: 4rem 2rem;
 
     .about-container {
@@ -100,30 +99,123 @@
       }
     }
   }
-}
 
-/* Mobile */
-@media (max-width: 600px) {
-  #about-me {
+  /* Mobile */
+  @media (max-width: 600px) {
     padding: 3rem 1.5rem;
 
     .about-container {
       gap: 2rem;
 
       .about-image img {
-        max-width: 80%; /* portrait fills more space on small screens */
+        max-width: 80%;
       }
 
       .about-text {
         h2 {
           font-size: 3.2rem;
         }
+
         p {
           text-align: left;
           font-size: 1.5rem;
           line-height: 1.6;
         }
       }
+    }
+  }
+}
+
+/* ========================= */
+/*  About Bridge Section     */
+/* ========================= */
+
+.about-bridge {
+  margin: 2rem auto 3rem;
+  max-width: 120rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+
+  h3 {
+    font-size: 2.6rem;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--color-text-light);
+    margin-bottom: 1.8rem;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .about-cta {
+    margin-top: 2rem;
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.4rem;
+      background-color: var(--color-accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0.8rem;
+      text-decoration: none;
+      font-size: 1.6rem;
+      transition: all 0.3s ease;
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+
+  /* Tablet */
+  @media (max-width: 900px) {
+    h3 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      padding: 0 1rem;
+    }
+
+    .cta-button {
+      font-size: 1.5rem;
+      padding: 1rem 2.2rem;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    padding: 2.5rem 1.5rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+    .cta-button {
+      font-size: 1.4rem;
     }
   }
 }

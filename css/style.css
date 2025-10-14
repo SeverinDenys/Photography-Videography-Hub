@@ -470,8 +470,9 @@ body {
   text-decoration: none;
   transition: background 0.3s;
 }
-
-/* Tablet */
+#about-me {
+  /* Tablet */
+}
 @media (max-width: 900px) {
   #about-me {
     padding: 4rem 2rem;
@@ -505,7 +506,9 @@ body {
     font-size: 1.8rem;
   }
 }
-/* Mobile */
+#about-me {
+  /* Mobile */
+}
 @media (max-width: 600px) {
   #about-me {
     padding: 3rem 1.5rem;
@@ -514,7 +517,7 @@ body {
     gap: 2rem;
   }
   #about-me .about-container .about-image img {
-    max-width: 80%; /* portrait fills more space on small screens */
+    max-width: 80%;
   }
   #about-me .about-container .about-text h2 {
     font-size: 3.2rem;
@@ -525,6 +528,92 @@ body {
     line-height: 1.6;
   }
 }
+
+/* ========================= */
+/*  About Bridge Section     */
+/* ========================= */
+.about-bridge {
+  margin: 2rem auto 3rem;
+  max-width: 120rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.about-bridge h3 {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.about-bridge p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.8rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.about-bridge .about-cta {
+  margin-top: 2rem;
+}
+.about-bridge .about-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.about-bridge .about-cta .cta-button i {
+  transition: transform 0.3s ease;
+}
+.about-bridge .about-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+.about-bridge .about-cta .cta-button:hover i {
+  transform: translateX(4px);
+}
+.about-bridge {
+  /* Tablet */
+}
+@media (max-width: 900px) {
+  .about-bridge h3 {
+    font-size: 2.2rem;
+  }
+  .about-bridge p {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+  .about-bridge .cta-button {
+    font-size: 1.5rem;
+    padding: 1rem 2.2rem;
+  }
+}
+.about-bridge {
+  /* Mobile */
+}
+@media (max-width: 600px) {
+  .about-bridge {
+    padding: 2.5rem 1.5rem;
+  }
+  .about-bridge h3 {
+    font-size: 2rem;
+  }
+  .about-bridge p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .about-bridge .cta-button {
+    font-size: 1.4rem;
+  }
+}
+
 #my-works {
   max-width: 130rem;
   padding: 2rem 2rem;
@@ -762,7 +851,6 @@ body {
   transition: all 0.3s ease;
 }
 .history-bridge .history-cta .cta-button i {
-  margin-left: 0.6rem;
   transition: transform 0.3s ease;
 }
 .history-bridge .history-cta .cta-button:hover {
@@ -973,33 +1061,81 @@ body {
   margin: 0.2rem 0;
 }
 
+.cameras-bridge {
+  margin: 5rem auto 5rem;
+  max-width: 90rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.cameras-bridge h3 {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.cameras-bridge p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.8rem;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.cameras-bridge .cameras-cta {
+  margin-top: 2.5rem;
+}
+.cameras-bridge .cameras-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.cameras-bridge .cameras-cta .cta-button i {
+  transition: transform 0.3s ease;
+}
+.cameras-bridge .cameras-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+.cameras-bridge .cameras-cta .cta-button:hover i {
+  transform: translateX(4px);
+}
 @media (max-width: 768px) {
-  #filters {
+  .cameras-bridge #filters {
     justify-content: center;
     max-width: 95%;
     padding: 1rem;
   }
-  #filters h3 {
+  .cameras-bridge #filters h3 {
     font-size: 1.3rem;
   }
-  #cameras {
+  .cameras-bridge #cameras {
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
-  #filters {
+  .cameras-bridge #filters {
     align-items: center;
     padding: 0.8rem;
   }
-  #filters h3 {
+  .cameras-bridge #filters h3 {
     font-size: 1.2rem;
   }
-  #cameras {
+  .cameras-bridge #cameras {
     display: flex;
     flex-wrap: wrap;
   }
 }
+
 #camera-details {
   padding: 2rem;
   margin: auto;
