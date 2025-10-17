@@ -1,30 +1,31 @@
 #history {
   padding: 3rem 2rem;
-  max-width: 95%;
+  max-width: 120rem;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 1rem;
-
+  // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   .history-intro,
   .history-bridge {
     text-align: center;
     margin: 0 auto 2.5rem;
     max-width: 70rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    line-height: 1.4;
     color: var(--color-text-light);
   }
 
   .history-bridge h3 {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 3 rem;
     color: var(--color-accent);
     margin-bottom: 3rem;
   }
 
   h2 {
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 3.2rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     color: var(--color-accent);
   }
@@ -108,6 +109,61 @@
   }
 }
 
+.history-bridge {
+  margin: 2rem auto 3rem;
+  max-width: 120rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+
+  h3 {
+    font-size: 2.6rem;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--color-text-light);
+    margin-bottom: 1.8rem;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .history-cta {
+    margin-top: 2rem;
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.4rem;
+      background-color: var(--color-accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0.8rem;
+      text-decoration: none;
+      font-size: 1.6rem;
+      transition: all 0.3s ease;
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+}
+
 /* Tablet and Mobile */
 @media (max-width: 900px) {
   #history .timeline {
@@ -160,6 +216,7 @@
   #history .timeline .event {
     flex-direction: column;
     align-items: flex-start;
+    max-width: 95%;
 
     img {
       max-width: 100%;

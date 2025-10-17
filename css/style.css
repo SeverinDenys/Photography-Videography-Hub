@@ -42,11 +42,10 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  font-size: 2rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
 }
 #navbar .hamburger {
   display: none;
@@ -99,29 +98,187 @@ body {
     max-height: 500px;
   }
 }
+#navbar {
+  background: var(--color-navbar-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  font-size: 2rem;
+}
+#navbar .logo-item {
+  margin-right: 2rem;
+}
+#navbar .logo-item .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+#navbar .logo-item .logo-link img {
+  width: 3rem;
+  height: 3rem;
+  filter: invert(48%) sepia(88%) saturate(656%) hue-rotate(8deg) brightness(100%) contrast(96%);
+  transition: transform 0.3s ease;
+}
+#navbar .logo-item .logo-link span {
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: 2.2rem;
+}
+#navbar .logo-item .logo-link:hover img {
+  transform: scale(1.08);
+}
+#navbar .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--color-text-main);
+  cursor: pointer;
+}
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+#navbar .nav-links li a {
+  color: var(--color-text-main);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  transition: color 0.3s;
+}
+#navbar .nav-links li a:hover {
+  color: var(--color-accent);
+}
+@media (max-width: 768px) {
+  #navbar .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #navbar .logo a img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  #navbar .logo .tagline {
+    display: none;
+  }
+  #navbar .hamburger {
+    display: block;
+  }
+  #navbar .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-navbar-bg);
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  #navbar .nav-links.active {
+    max-height: 500px;
+  }
+  #navbar .nav-links li a {
+    display: block;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
 #Intro-section {
   position: relative;
 }
 #Intro-section .intro-text {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 2.5rem 3rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  max-width: 80rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  max-width: 120rem;
   margin: 4rem auto 5rem;
   text-align: center;
 }
 #Intro-section .intro-text h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 1rem;
   color: var(--color-accent);
   line-height: 1.2;
 }
 #Intro-section .intro-text p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 0;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin: 0 auto;
   color: var(--color-text-light);
+  max-width: 70rem;
+  text-align: left;
+}
+#Intro-section .intro-text .intro-bridge {
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+#Intro-section .intro-text .intro-bridge h3 {
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  margin-bottom: 1.6rem;
+}
+#Intro-section .intro-text .intro-bridge p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.4rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta {
+  margin-top: 1.8rem;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button i {
+  margin-left: 0.6rem;
+  transition: transform 0.3s ease;
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+#Intro-section .intro-text .intro-bridge .intro-cta .cta-button:hover i {
+  transform: translateX(4px);
+}
+#Intro-section .hub-description {
+  background: #ffffff;
+  padding: 3rem 4rem;
+  margin: 0 auto 6rem;
+  max-width: 100rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+#Intro-section .hub-description h2 {
+  color: var(--color-accent);
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
+#Intro-section .hub-description p {
+  color: var(--color-text-light);
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+}
+#Intro-section .hub-description p strong {
+  color: var(--color-text-main);
 }
 #Intro-section .intro-carousel {
   position: relative;
@@ -180,6 +337,29 @@ body {
   #Intro-section .intro-text p {
     font-size: 1.3rem;
   }
+  #Intro-section .intro-text .intro-bridge {
+    padding-top: 1.5rem;
+  }
+  #Intro-section .intro-text .intro-bridge h3 {
+    font-size: 2.2rem;
+  }
+  #Intro-section .intro-text .intro-bridge p {
+    font-size: 1.5rem;
+  }
+  #Intro-section .intro-text .intro-bridge .cta-button {
+    font-size: 1.5rem;
+    padding: 0.9rem 2rem;
+  }
+  #Intro-section .hub-description {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  #Intro-section .hub-description h2 {
+    font-size: 2.2rem;
+  }
+  #Intro-section .hub-description p {
+    font-size: 1.5rem;
+  }
   #Intro-section .intro-carousel {
     height: 100vh;
   }
@@ -205,6 +385,28 @@ body {
     font-size: 1.4rem;
     line-height: 1.4;
   }
+  #Intro-section .intro-text .intro-bridge {
+    padding-top: 1rem;
+  }
+  #Intro-section .intro-text .intro-bridge h3 {
+    font-size: 2rem;
+  }
+  #Intro-section .intro-text .intro-bridge p {
+    font-size: 1.4rem;
+  }
+  #Intro-section .intro-text .intro-bridge .cta-button {
+    font-size: 1.4rem;
+  }
+  #Intro-section .hub-description {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  #Intro-section .hub-description h2 {
+    font-size: 1.9rem;
+  }
+  #Intro-section .hub-description p {
+    font-size: 1.4rem;
+  }
   #Intro-section .intro-carousel {
     height: 100vh;
   }
@@ -217,11 +419,10 @@ body {
 
 #about-me {
   background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   padding: 6rem 2rem;
-  max-width: 95%;
+  max-width: 120rem;
   margin: 5rem auto 0;
-  border-radius: 1rem;
 }
 #about-me .about-text .intro {
   font-style: italic;
@@ -243,7 +444,7 @@ body {
 #about-me .about-container .about-image img {
   max-width: 100%;
   border-radius: 1rem;
-  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
 }
 #about-me .about-container .about-text {
   max-width: 60rem;
@@ -255,9 +456,9 @@ body {
   margin-bottom: 1rem;
 }
 #about-me .about-container .about-text p {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--color-text-light);
-  line-height: 1.5;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
 }
 #about-me .about-container .about-text .btn {
@@ -269,8 +470,9 @@ body {
   text-decoration: none;
   transition: background 0.3s;
 }
-
-/* Tablet */
+#about-me {
+  /* Tablet */
+}
 @media (max-width: 900px) {
   #about-me {
     padding: 4rem 2rem;
@@ -304,7 +506,9 @@ body {
     font-size: 1.8rem;
   }
 }
-/* Mobile */
+#about-me {
+  /* Mobile */
+}
 @media (max-width: 600px) {
   #about-me {
     padding: 3rem 1.5rem;
@@ -313,24 +517,111 @@ body {
     gap: 2rem;
   }
   #about-me .about-container .about-image img {
-    max-width: 80%; /* portrait fills more space on small screens */
+    max-width: 80%;
   }
   #about-me .about-container .about-text h2 {
-    font-size: 2rem;
+    font-size: 3.2rem;
   }
   #about-me .about-container .about-text p {
+    text-align: left;
     font-size: 1.5rem;
     line-height: 1.6;
   }
 }
+
+/* ========================= */
+/*  About Bridge Section     */
+/* ========================= */
+.about-bridge {
+  margin: 2rem auto 3rem;
+  max-width: 120rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.about-bridge h3 {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.about-bridge p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.8rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.about-bridge .about-cta {
+  margin-top: 2rem;
+}
+.about-bridge .about-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.about-bridge .about-cta .cta-button i {
+  transition: transform 0.3s ease;
+}
+.about-bridge .about-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+.about-bridge .about-cta .cta-button:hover i {
+  transform: translateX(4px);
+}
+.about-bridge {
+  /* Tablet */
+}
+@media (max-width: 900px) {
+  .about-bridge h3 {
+    font-size: 2.2rem;
+  }
+  .about-bridge p {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+  .about-bridge .cta-button {
+    font-size: 1.5rem;
+    padding: 1rem 2.2rem;
+  }
+}
+.about-bridge {
+  /* Mobile */
+}
+@media (max-width: 600px) {
+  .about-bridge {
+    padding: 2.5rem 1.5rem;
+  }
+  .about-bridge h3 {
+    font-size: 2rem;
+  }
+  .about-bridge p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .about-bridge .cta-button {
+    font-size: 1.4rem;
+  }
+}
+
 #my-works {
-  max-width: 95%;
+  max-width: 130rem;
   padding: 2rem 2rem;
-  margin: 0 auto;
+  margin: 3rem auto 1rem;
 }
 #my-works .works-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: var(--color-accent);
   margin-bottom: 2rem;
 }
@@ -338,7 +629,8 @@ body {
   text-align: center;
   max-width: 75rem;
   margin: 0 auto 3rem;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
+  line-height: 1.4;
   color: var(--color-text-light);
 }
 #my-works .works-carousel {
@@ -355,7 +647,6 @@ body {
   min-width: 28rem;
   overflow: hidden;
   border-radius: 0.8rem;
-  box-shadow: 0 6px 2rem rgba(0, 0, 0, 0.15);
   background: #fff;
 }
 #my-works .works-carousel .works-slide img {
@@ -426,29 +717,30 @@ body {
 }
 #history {
   padding: 3rem 2rem;
-  max-width: 95%;
+  max-width: 120rem;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 #history .history-intro,
 #history .history-bridge {
   text-align: center;
   margin: 0 auto 2.5rem;
   max-width: 70rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  line-height: 1.4;
   color: var(--color-text-light);
 }
 #history .history-bridge h3 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 3 rem;
   color: var(--color-accent);
   margin-bottom: 3rem;
 }
 #history h2 {
   text-align: center;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   color: var(--color-accent);
 }
@@ -520,6 +812,54 @@ body {
   margin-left: auto;
 }
 
+.history-bridge {
+  margin: 2rem auto 3rem;
+  max-width: 120rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.history-bridge h3 {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.history-bridge p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.8rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.history-bridge .history-cta {
+  margin-top: 2rem;
+}
+.history-bridge .history-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.history-bridge .history-cta .cta-button i {
+  transition: transform 0.3s ease;
+}
+.history-bridge .history-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+.history-bridge .history-cta .cta-button:hover i {
+  transform: translateX(4px);
+}
+
 /* Tablet and Mobile */
 @media (max-width: 900px) {
   #history .timeline::before {
@@ -561,6 +901,7 @@ body {
   #history .timeline .event {
     flex-direction: column;
     align-items: flex-start;
+    max-width: 95%;
   }
   #history .timeline .event img {
     max-width: 100%;
@@ -580,8 +921,9 @@ body {
   text-align: center;
 }
 #footer .footer-container p {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
   color: var(--color-text);
 }
 #footer .footer-container p strong {
@@ -683,70 +1025,128 @@ body {
 
 #cameras {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center; /* centers each card within its grid cell */
   max-width: 100rem;
   gap: 2rem;
   margin: 2rem auto;
   padding: 1rem;
 }
 #cameras .cameras-container {
-  margin: 0 auto;
-}
-#cameras .cameras-container {
   cursor: pointer;
   background: #fff;
-  max-width: 250px;
+  max-width: 25rem;
   padding: 1rem;
   text-align: center;
   font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 #cameras .cameras-container img {
   width: 100%;
   height: 20rem;
   object-fit: contain;
-  background: #f8f8f8;
-  padding: 0.5rem;
   border-radius: 6px;
+  background: none;
+  padding: 0;
 }
 #cameras .cameras-info h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
+  color: var(--color-accent);
 }
 #cameras .cameras-info p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin: 0.2rem 0;
 }
 
+.no-results {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #777;
+  margin-top: 3rem;
+  background: #f9f9f9;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cameras-bridge {
+  margin: 5rem auto 5rem;
+  max-width: 90rem;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.cameras-bridge h3 {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.cameras-bridge p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1.8rem;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.cameras-bridge .cameras-cta {
+  margin-top: 2.5rem;
+}
+.cameras-bridge .cameras-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.cameras-bridge .cameras-cta .cta-button i {
+  transition: transform 0.3s ease;
+}
+.cameras-bridge .cameras-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+.cameras-bridge .cameras-cta .cta-button:hover i {
+  transform: translateX(4px);
+}
 @media (max-width: 768px) {
-  #filters {
+  .cameras-bridge #filters {
     justify-content: center;
     max-width: 95%;
     padding: 1rem;
   }
-  #filters h3 {
+  .cameras-bridge #filters h3 {
     font-size: 1.3rem;
   }
-  #cameras {
+  .cameras-bridge #cameras {
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
-  #filters {
+  .cameras-bridge #filters {
     align-items: center;
     padding: 0.8rem;
   }
-  #filters h3 {
+  .cameras-bridge #filters h3 {
     font-size: 1.2rem;
   }
-  #cameras {
+  .cameras-bridge #cameras {
     display: flex;
     flex-wrap: wrap;
   }
 }
+
 #camera-details {
   padding: 2rem;
   margin: auto;
@@ -754,14 +1154,14 @@ body {
   max-width: 70rem;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 #camera-details .camera-fullDesk p {
   margin: auto;
   text-align: center;
   padding: 0.5rem;
   max-width: 70rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: left;
 }
 #camera-details .cameras-photo {
@@ -807,13 +1207,13 @@ body {
   max-width: 60rem;
 }
 #camera-intro h2 {
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: var(--color-accent);
   margin-bottom: 0.8rem;
 }
 #camera-intro p {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   color: var(--color-text-light);
 }
 
@@ -847,8 +1247,7 @@ body {
 }
 #camera-lenses .lens-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem 1rem;
   width: 100%;
   max-width: 260px;
@@ -998,7 +1397,7 @@ body {
   color: var(--color-accent);
 }
 #resources .resources-intro p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: var(--color-text-secondary);
   line-height: 1.6;
 }
@@ -1041,7 +1440,7 @@ body {
   border-radius: 8px;
   color: var(--color-text-main);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }

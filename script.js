@@ -94,6 +94,13 @@ function getFilteredCameras() {
 
 function applyFilters() {
   const filtered = getFilteredCameras();
+  const section = document.getElementById("cameras");
+  section.innerHTML = ""; // Clear before rendering
+
+  const noResultsMsg = document.createElement("p");
+  noResultsMsg.classList.add("no-results");
+  noResultsMsg.textContent =
+    "No cameras found matching your criteria. Try adjusting the filters.";
 
   if (
     !brandSelect.value &&
@@ -101,8 +108,13 @@ function applyFilters() {
     !priceSelect.value &&
     document.querySelectorAll('input[name="usecase"]:checked').length === 0
   ) {
+    // No filters selected → show first 9 by default
     renderCameras(camerasData.slice(0, 9));
+  } else if (filtered.length === 0) {
+    // Filters selected but nothing found
+    section.appendChild(noResultsMsg);
   } else {
+    // Matching results
     renderCameras(filtered);
   }
 }
@@ -137,18 +149,15 @@ const renderCameras = (cameras) => {
     container.classList.add("cameras-container");
 
     container.innerHTML = `
-      <div class="cameras-container"> 
-        <div class="cameras-photo">
-          <img src="${camera.image}" alt="${camera.model}">
-        </div>
-        <div class="cameras-info">
-          <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
-          <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
-          <p class="camera-price">Price: $${camera.price}</p>
-        </div>
-      </div>
-    `;
-
+  <div class="cameras-photo">
+    <img src="${camera.image}" alt="${camera.model}">
+  </div>
+  <div class="cameras-info">
+    <h4 class="camera-name">${camera.brand} ${camera.model}</h4>
+    <p class="camera-description">${camera.sensor}, ${camera.megapixels} MP</p>
+    <p class="camera-price">Price: $${camera.price}</p>
+  </div>
+`;
     // send only brand, sensor, and use cases
     container.addEventListener("click", () => {
       console.log("clicked:", camera);

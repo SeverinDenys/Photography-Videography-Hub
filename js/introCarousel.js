@@ -28,7 +28,7 @@ export function initCarousel(selector) {
   setInterval(() => {
     index = (index + 1) % slides.length;
     showSlide(index);
-  }, 5000);
+  }, 2500);
 
   showSlide(index);
 }
