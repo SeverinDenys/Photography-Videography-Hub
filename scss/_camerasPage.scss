@@ -131,6 +131,17 @@
   }
 }
 
+.no-results {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #777;
+  margin-top: 3rem;
+  background: #f9f9f9;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .cameras-bridge {
   margin: 5rem auto 5rem;
   max-width: 90rem;

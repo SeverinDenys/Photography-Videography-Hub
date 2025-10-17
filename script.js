@@ -33,11 +33,9 @@ brandSelect.addEventListener("change", applyFilters);
 matrixSelect.addEventListener("change", applyFilters);
 priceSelect.addEventListener("change", applyFilters);
 
-document
-  .querySelectorAll('input[name="usecase"]')
-  .forEach((checkbox) => {
-    checkbox.addEventListener("change", applyFilters);
-  });
+document.querySelectorAll('input[name="usecase"]').forEach((checkbox) => {
+  checkbox.addEventListener("change", applyFilters);
+});
 
 // =============================
 // Filtering logic
@@ -48,8 +46,7 @@ function getFilteredCameras() {
   // Brand filter
   if (brandSelect.value) {
     filtered = filtered.filter(
-      (camera) =>
-        camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
+      (camera) => camera.brand.toLowerCase() === brandSelect.value.toLowerCase()
     );
   }
 
@@ -97,16 +94,27 @@ function getFilteredCameras() {
 
 function applyFilters() {
   const filtered = getFilteredCameras();
+  const section = document.getElementById("cameras");
+  section.innerHTML = ""; // Clear before rendering
+
+  const noResultsMsg = document.createElement("p");
+  noResultsMsg.classList.add("no-results");
+  noResultsMsg.textContent =
+    "No cameras found matching your criteria. Try adjusting the filters.";
 
   if (
     !brandSelect.value &&
     !matrixSelect.value &&
     !priceSelect.value &&
-    document.querySelectorAll('input[name="usecase"]:checked')
-      .length === 0
+    document.querySelectorAll('input[name="usecase"]:checked').length === 0
   ) {
+    // No filters selected → show first 9 by default
     renderCameras(camerasData.slice(0, 9));
+  } else if (filtered.length === 0) {
+    // Filters selected but nothing found
+    section.appendChild(noResultsMsg);
   } else {
+    // Matching results
     renderCameras(filtered);
   }
 }
