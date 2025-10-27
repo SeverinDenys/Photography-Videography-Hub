@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const section = document.createElement("section");
       section.classList.add("resource-category");
 
-      // Template string for each category block
       section.innerHTML = `
         <h2>${cat.category}</h2>
         <ul>

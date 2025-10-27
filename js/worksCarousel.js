@@ -9,35 +9,57 @@ export function initWorksCarousel() {
 
   let index = 0;
 
-  // function getSlideWidth() {
-  //   return slides[0].offsetWidth + 16; // width + gap
-  // }
   function getSlideWidth() {
-    return slides[0].offsetWidth; // remove +16
+    const slide = slides[0];
+    const computedStyle = window.getComputedStyle(track);
+    const gap = parseFloat(computedStyle.gap) || 0;
+    return slide.offsetWidth + gap;
   }
 
   function getMaxIndex() {
-    const visibleCount = Math.floor(carousel.offsetWidth / getSlideWidth());
-    return slides.length - visibleCount; // last full "page"
+    const carouselWidth = carousel.offsetWidth;
+    const slideWidth = getSlideWidth();
+    const totalTrackWidth =
+      slides.length * slideWidth -
+      parseFloat(window.getComputedStyle(track).gap || 0);
+
+    const maxScrollDistance = totalTrackWidth - carouselWidth;
+
+    const maxIndex = Math.max(
+      0,
+      Math.ceil(maxScrollDistance / slideWidth)
+    );
+
+    return maxIndex;
   }
 
   function updateCarousel() {
-    track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+    const slideWidth = getSlideWidth();
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index >= getMaxIndex();
   }
 
   prevBtn.addEventListener("click", () => {
-    if (index > 0) index--;
-    updateCarousel();
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
   });
 
   nextBtn.addEventListener("click", () => {
-    if (index < getMaxIndex()) index++;
-    updateCarousel();
+    const maxIndex = getMaxIndex();
+    if (index < maxIndex) {
+      index++;
+      updateCarousel();
+    }
   });
 
-  window.addEventListener("resize", updateCarousel);
+  window.addEventListener("resize", () => {
+    index = Math.min(index, getMaxIndex());
+    updateCarousel();
+  });
 
   updateCarousel();
 }

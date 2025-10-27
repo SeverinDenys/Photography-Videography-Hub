@@ -2,7 +2,6 @@
   max-width: 130rem;
   padding: 2rem 2rem;
   margin: 3rem auto 1rem;
-  // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
 
   .works-title {
     text-align: center;
@@ -22,9 +21,9 @@
 
   .works-carousel {
     overflow: hidden;
-
     max-width: 90%;
     margin: 0 auto;
+    position: relative;
 
     .works-track {
       display: flex;
@@ -33,16 +32,16 @@
     }
 
     .works-slide {
-      min-width: 28rem;
+      flex: 0 0 28rem; // Changed from min-width to flex
+      width: 28rem; // Explicit width
       overflow: hidden;
       border-radius: 0.8rem;
-      // box-shadow: 0 6px 2rem rgba(0, 0, 0, 0.15);
       background: #fff;
 
       img {
         width: 100%;
         height: auto;
-
+        display: block; // Removes extra space below image
         object-fit: cover;
       }
     }
@@ -66,10 +65,16 @@
         &:hover {
           background: var(--color-accent);
         }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
       }
     }
   }
 }
+
 /* Tablet */
 @media (max-width: 900px) {
   #my-works {
@@ -89,7 +94,8 @@
       max-width: 100%;
 
       .works-slide {
-        min-width: 22rem;
+        flex: 0 0 22rem;
+        width: 22rem;
       }
 
       .works-controls {
@@ -107,13 +113,13 @@
   #my-works {
     .works-carousel {
       .works-track {
-        gap: 0;
+        gap: 1rem;
       }
 
       .works-slide {
         flex: 0 0 100%;
-        min-width: 100%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
 
         img {
           width: 100%;
