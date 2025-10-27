@@ -408,7 +408,7 @@ body {
     font-size: 1.4rem;
   }
   #Intro-section .intro-carousel {
-    height: 100vh;
+    height: 60vh;
   }
   #Intro-section .intro-carousel .carousel-slide .carousel-text {
     max-width: 90%;
@@ -948,6 +948,19 @@ body {
   height: 100vh;
   margin-bottom: 5rem;
 }
+.carousel .carousel-overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(116, 116, 116, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 10;
+}
 .carousel .carousel-slide {
   position: absolute;
   top: 0;
@@ -965,6 +978,60 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: brightness(70%);
+}
+@media (max-width: 768px) {
+  .carousel {
+    height: 70vh;
+  }
+  .carousel .carousel-overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(116, 116, 116, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 10;
+  }
+  .carousel .carousel-slide {
+    height: 70vh;
+  }
+  .carousel .carousel-slide .carousel-text {
+    left: 5%;
+    right: 5%;
+    bottom: 10%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+  .carousel .carousel-slide .carousel-text h2 {
+    font-size: 1.6rem;
+  }
+  .carousel .carousel-slide .carousel-text p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .carousel {
+    height: 60vh;
+  }
+  .carousel .carousel-slide {
+    height: 60vh;
+  }
+  .carousel .carousel-slide .carousel-text {
+    bottom: 8%;
+    padding: 0.8rem 1rem;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .carousel .carousel-slide h2 {
+    font-size: 1.4rem;
+  }
+  .carousel .carousel-slide p {
+    font-size: 0.95rem;
+  }
 }
 
 #filters {
@@ -1448,6 +1515,48 @@ body {
   color: var(--color-accent);
 }
 
+.resources-finish {
+  max-width: 900px;
+  margin: 5rem auto 3rem;
+  padding: 3rem 2rem;
+  background: var(--color-card-bg, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--color-text-main);
+  line-height: 1.8;
+}
+.resources-finish h3 {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+.resources-finish p {
+  text-align: left;
+  font-size: 1.7rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.2rem;
+}
+.resources-finish .resources-cta {
+  margin-top: 2rem;
+}
+.resources-finish .resources-cta .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1.6rem;
+}
+.resources-finish .resources-cta .cta-button:hover {
+  transform: translateY(-2px);
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -1457,6 +1566,9 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ===============================
+   Responsive Design
+   =============================== */
 @media (max-width: 900px) {
   #resources .resource-category ul {
     grid-template-columns: repeat(2, 1fr);
@@ -1470,6 +1582,15 @@ footer {
     font-size: 2rem;
   }
   #resources .resources-intro p {
+    font-size: 1rem;
+  }
+  .resources-finish {
+    padding: 2rem 1.2rem;
+  }
+  .resources-finish h3 {
+    font-size: 1.6rem;
+  }
+  .resources-finish p {
     font-size: 1rem;
   }
 }
