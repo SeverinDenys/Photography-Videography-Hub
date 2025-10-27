@@ -49,6 +49,7 @@
         border-radius: 8px;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         cursor: pointer;
+
         &:hover {
           transform: translateY(-3px);
           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
@@ -75,6 +76,53 @@
   }
 }
 
+.resources-finish {
+  max-width: 900px;
+  margin: 5rem auto 3rem;
+  padding: 3rem 2rem;
+  background: var(--color-card-bg, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--color-text-main);
+  line-height: 1.8;
+
+  h3 {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.7rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.2rem;
+  }
+
+  .resources-cta {
+    margin-top: 2rem;
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.6rem;
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      font-size: 1.6rem;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -84,8 +132,9 @@ footer {
   font-size: 0.9rem;
 }
 
-// responsive tablet/mobile devices
-
+/* ===============================
+   Responsive Design
+   =============================== */
 @media (max-width: 900px) {
   #resources .resource-category ul {
     grid-template-columns: repeat(2, 1fr);
@@ -103,5 +152,17 @@ footer {
 
   #resources .resources-intro p {
     font-size: 1rem;
+  }
+
+  .resources-finish {
+    padding: 2rem 1.2rem;
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 }
